@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_screen">
+    <sys_ux_screen action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <app_config display_value="PR Employee Portal">f2055fcfa754b550f7955ecd23146ca1</app_config>
+        <description/>
+        <event_mappings>[ ]</event_mappings>
+        <macroponent display_value="Evaluation">ba055fcf7a54b5509cf96f496dc75322</macroponent>
+        <macroponent_config>{
+  "recId" : {
+    "type" : "CONTEXT_BINDING",
+    "binding" : {
+      "address" : [ "sysId" ],
+      "category" : "props"
+    }
+  },
+  "label" : {
+    "type" : "TRANSLATION_LITERAL",
+    "value" : {
+      "code" : null,
+      "message" : "",
+      "comment" : ""
+    }
+  },
+  "bare" : {
+    "type" : "JSON_LITERAL",
+    "value" : true
+  },
+  "scrollable" : {
+    "type" : "JSON_LITERAL",
+    "value" : "none"
+  },
+  "headerLevel" : {
+    "type" : "JSON_LITERAL",
+    "value" : "1"
+  },
+  "headingOnlyVisibleToScreenReaders" : {
+    "type" : "JSON_LITERAL",
+    "value" : false
+  },
+  "interceptNotifications" : {
+    "type" : "JSON_LITERAL",
+    "value" : false
+  },
+  "propagateNotifications" : {
+    "type" : "JSON_LITERAL",
+    "value" : false
+  }
+}</macroponent_config>
+        <name>Evaluation default</name>
+        <order>0</order>
+        <parent_macroponent display_value="Self Evaluation">76055fcfc654b55023ffee1357c20e32</parent_macroponent>
+        <required_translations>[ ]</required_translations>
+        <rollback_screen/>
+        <screen_condition/>
+        <screen_type display_value="Evaluation">36055fcfd254b5501cd81075686a2332</screen_type>
+        <sys_class_name>sys_ux_screen</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:11</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>36055fcf3b54b55097d184b2bfb5c71f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Evaluation default</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name>sys_ux_screen_36055fcf3b54b55097d184b2bfb5c71f</sys_update_name>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:11</sys_updated_on>
+    </sys_ux_screen>
+</record_update>

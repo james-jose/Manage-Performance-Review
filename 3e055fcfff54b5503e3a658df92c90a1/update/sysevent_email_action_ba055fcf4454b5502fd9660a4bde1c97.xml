@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="INSERT_OR_UPDATE">
+        <action_insert>false</action_insert>
+        <action_update>true</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <category display_value="x_sisy_manage_pe_0.Performance R" name="x_sisy_manage_pe_0.Performance R">72055fcf2254b550a166790ce332da98</category>
+        <collection>x_sisy_manage_pe_0_performance_review</collection>
+        <condition/>
+        <content_type>text/html</content_type>
+        <default_interval/>
+        <description>Admins receive notification if a self-evaluation is submitted without a manager or title.&#13;
+</description>
+        <digest_from/>
+        <digest_html><![CDATA[<p>Employee: ${employee}<br />test 2 content</p>]]></digest_html>
+        <digest_reply_to/>
+        <digest_separator_html><![CDATA[<p><br /></p>
+<hr />
+<p><br /></p>]]></digest_separator_html>
+        <digest_separator_text><![CDATA[\n--------------------------------------------------------------------------------\n]]></digest_separator_text>
+        <digest_subject/>
+        <digest_template/>
+        <digest_text/>
+        <digestable>false</digestable>
+        <enable_dynamic_translation>false</enable_dynamic_translation>
+        <event_name>activate.life.cycle.migration</event_name>
+        <event_parm_1>false</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from/>
+        <generation_type>triggered</generation_type>
+        <importance/>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<center>
+<table>
+<tbody>
+<tr>
+<td><img style="align: baseline;" title="" src="x_sisy_manage_pe_0.yellow-checkmark.pngx" alt="" width="40" height="40" align="baseline" border="" hspace="" vspace="" /></td>
+<td><br /></td>
+</tr>
+</tbody>
+</table>
+</center>
+<p style="text-align: center;"><strong><span style="font-family: arial, helvetica, sans-serif; font-size: 18pt;">New self evaluation for review</span></strong></p>
+<p style="text-align: center;"><br /></p>
+<p style="text-align: center;"><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt; color: #808080;">${manager} submitted their self evaluation on ${sys_updated_on}</span><br /></p>
+<p style="text-align: center;"><br /></p>
+<center>
+<table style="background-color: #278efc; height: 50px;" role="presentation" border="0" width="234" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="border-radius: 16px; width: 230px; text-align: center; height: 45px;"><span style="font-family: tahoma, arial, helvetica, sans-serif;"><a class="button-a button-a-primary" style="font-size: 11pt; line-height: 15px; text-decoration: none; border-radius: 16px;">${mail_script:pr_admin_view}</a></span></td>
+</tr>
+</tbody>
+</table>
+</center>
+<p style="text-align: center;"><br /></p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>PR Admin Self-Eval Submitted w/o Manger </name>
+        <omit_watermark>false</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields/>
+        <recipient_groups/>
+        <recipient_users>3c86549544c5e010f877b0b0bd5486ea</recipient_users>
+        <reply_to/>
+        <send_self>false</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>Ready for review: self evaluation from ${employee}</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:44:53</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ba055fcf4454b5502fd9660a4bde1c97</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PR Admin Self-Eval Submitted w/o Manger</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name>sysevent_email_action_ba055fcf4454b5502fd9660a4bde1c97</sys_update_name>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:44:53</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template display_value="Performance Review Template">fa055fcfca54b550d064f9bcc2d73697</template>
+        <type>email</type>
+        <weight>0</weight>
+    </sysevent_email_action>
+</record_update>

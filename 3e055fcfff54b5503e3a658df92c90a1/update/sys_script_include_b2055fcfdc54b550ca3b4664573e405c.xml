@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_sisy_manage_pe_0.PRSettings</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>PRSettings</name>
+        <script><![CDATA[var PRSettings = Class.create();
+PRSettings.prototype = {
+
+    createRecord: function() {
+        try {
+            //create a new settings record on the performance review table
+            var settings_gr = new GlideRecord('x_sisy_manage_pe_0_performance_review');
+            settings_gr.initialize();
+            settings_gr.setWorkflow(false);
+            settings_gr.setValue('active', false);
+            settings_gr.setValue('review_period', 'Settings');
+            settings_gr.setValue('number', 'EPR0000000');
+            settings_gr.setValue('review_period_start_date', gs.getProperty("x_sisy_manage_pe_0.review_period_start_date"));
+            settings_gr.setValue('end_date', gs.getProperty("x_sisy_manage_pe_0.end_date"));
+            settings_gr.setValue('employee_prompt_self_review', gs.getProperty("x_sisy_manage_pe_0.employee_prompt_self_review"));
+            settings_gr.setValue('notify_reminder', gs.getProperty("x_sisy_manage_pe_0.notify_reminder"));
+            settings_gr.setValue('evaluation_due', gs.getProperty("x_sisy_manage_pe_0.review_confirmation_deadline"));
+            settings_gr.setValue('notify_if_manager_isn_t_specified', gs.getProperty("x_sisy_manage_pe_0.mgr_empty_notify"));
+            settings_gr.setValue('title_empty_notify', gs.getProperty("x_sisy_manage_pe_0.title_empty_notify"));
+            settings_gr.setValue('review_process_schedule', gs.getProperty("x_sisy_manage_pe_0.review_process_schedule"));
+
+            //if the filter value is not empty, remove the encoded query and set just the sys ids
+            var filter = gs.getProperty("x_sisy_manage_pe_0.review_user_filter_criteria");
+            if (!gs.nil(filter)) {
+                filter = filter.replace("sys_idIN", '');
+                settings_gr.setValue('emp_filter', filter);
+            }
+
+            //capture the sys id of the new record
+            var settings_sys_id = settings_gr.insert();
+
+
+            //if the sys_id of the new reocrd isn't empty
+            if (!gs.nil(settings_sys_id)) {
+
+                //set the sys_id to the property value
+                gs.setProperty('x_sisy_manage_pe_0.settings_record', settings_sys_id);
+				return settings_sys_id;
+            }
+        } catch (err) {
+            gs.error("SI:{0} has encountered the following error: {1}", this.type + '', err);
+        }
+    },
+
+    type: 'PRSettings'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:46:09</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>b2055fcfdc54b550ca3b4664573e405c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PRSettings</sys_name>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy>protected</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name>sys_script_include_b2055fcfdc54b550ca3b4664573e405c</sys_update_name>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:46:09</sys_updated_on>
+    </sys_script_include>
+</record_update>

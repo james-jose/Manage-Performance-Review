@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_sisy_manage_pe_0.PRCheckPerfAppraisalSecurity</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Utilized in the ACL checks of Performance Appraisal App</description>
+        <name>PRCheckPerfAppraisalSecurity</name>
+        <script><![CDATA[var PRCheckPerfAppraisalSecurity = Class.create();
+PRCheckPerfAppraisalSecurity.prototype = {
+    initialize: function() {
+    },
+	// current : Performance Review Glide Record
+	findSuboridnatePR : function (current) {
+		var answer = false;
+		var subordinateUser = new GlideRecord('sys_user');
+		subordinateUser.addQuery('sys_id','=',current.getValue('employee'));
+		subordinateUser.addQuery('manager','=',gs.getUserID());
+		subordinateUser.query();
+		if (subordinateUser.next())
+			answer = true;
+		
+		return answer;
+
+	},
+	// role : scoped app admin user role
+	isAppAdmin : function (role){
+		
+		var answer = false;
+		var arrUtil = new global.ArrayUtil();
+		var strRoles = gs.getUser().getRoles().toString(); // string
+		var arrRoles = strRoles.split(','); // array
+		answer = arrUtil.contains(arrRoles,role);
+		return answer;
+
+	},
+	
+	// checks if the record is  New or Existing
+	// if Existing, Is current.employee.equals() gs.getUserID()
+	
+	findMyPR : function (current){
+		var answer = true ;
+		if (current.isValidRecord()) {			
+			answer = (current.getValue('employee') == gs.getUserID()) ? true : false ; 			
+		}		
+		return answer;
+		
+	},
+
+    type: 'PRCheckPerfAppraisalSecurity'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:45</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>be055fcf0954b5505dd06f2038c4db5b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PRCheckPerfAppraisalSecurity</sys_name>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name>sys_script_include_be055fcf0954b5505dd06f2038c4db5b</sys_update_name>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:45</sys_updated_on>
+    </sys_script_include>
+</record_update>

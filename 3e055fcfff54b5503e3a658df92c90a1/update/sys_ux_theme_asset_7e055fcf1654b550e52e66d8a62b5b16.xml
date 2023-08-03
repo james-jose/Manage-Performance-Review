@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_theme_asset">
+    <sys_ux_theme_asset action="INSERT_OR_UPDATE">
+        <category>image</category>
+        <name>header_logo</name>
+        <sys_class_name>sys_ux_theme_asset</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:53</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>7e055fcf1654b550e52e66d8a62b5b16</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>header_logo</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name>sys_ux_theme_asset_7e055fcf1654b550e52e66d8a62b5b16</sys_update_name>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:53</sys_updated_on>
+    </sys_ux_theme_asset>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color/>
+        <chunk_size_bytes>700000</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/svg+xml</content_type>
+        <file_name>now-logo.svg</file_name>
+        <hash>edc3cc2e7bf5fb033ece9872181c4ac8ec36362a87f2ac679e50e0d689fb183d</hash>
+        <image_height/>
+        <image_width/>
+        <size_bytes>4408</size_bytes>
+        <size_compressed>1383</size_compressed>
+        <state>available_conditionally</state>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:53</sys_created_on>
+        <sys_id>f2055fcf2c54b5504df14d5b50ccf516</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:53</sys_updated_on>
+        <table_name>sys_ux_theme_asset</table_name>
+        <table_sys_id>7e055fcf1654b550e52e66d8a62b5b16</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="now-logo.svg" sys_id="f2055fcf2c54b5504df14d5b50ccf516">f2055fcf2c54b5504df14d5b50ccf516</sys_attachment>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:53</sys_created_on>
+        <sys_id>3a055fcfa354b5504bea6e4f3f5e3916</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>pVjLUuM4FN33V2jMBqoSRe8HldA1nZruDbOamc3sKGISF8FO2YYwfz9XDztyxwnQhI10LN33uZKYf3192qKXvG6KqlxkFJMM5eV9tSrK9SL75+/vU5N9vfkyb17WaF+s2s0iU3r3mqFNXqw37SJjws1einz/rXpdZAQRpDRiIkuF0gyBmrJZZJu23V3PZvv9Hu85rur1jBFCZiA+Lrl+3Rbl49hCaq2d+a/ZzRcEv/lv0yn6kZd5fddW9TX66zFv7zdIcszQpWZK8Cs0RU5QA5Ia//Vut8P31ROaTqOMtmi3+U1Z7afbal3NZ2Eevq3y5v5mWed3bb4C79tNVIHnM/+pW/XQhKGf7qrtf+uqRMVqke3u2s0UnN9VRdk2PjqYWomoxlQZDr9jAIZWKWnct2SSzc7p4IkOrIjRUimronBGsDFaUMjLEUAN5uGH0o0H+LxemeqVklmqlFcjpSDBH2awpnIMSj1NNr/XZz3wWROlom4NmoIoBn7SszBzupgz7yAhYp12l+wuw/O119+VS4aatq4ec4eUeTebRqJA4h+K7bb76MbT+nkLq/OXvKxWqyxxLwj+UVfPuymFsLb1Xdk8VPXTIvPDLRThJcHE/yZgYxhdJTKO5PA3xYDb3MhjMV7U013z6KW5wZR13uw3RZuPrPd7npsceY5eb+r8YZFdRArMRuTPnNwRPLiw3BY7UDq20clEsORPMklq6JZM0iK7FVjoMD6JU2wjjpYSaxvqA5YbrWOtaCy47WBqRSxSi/lB+AFeUoq10nIAUo7DWINCBpXvFVKJuZlArVmpJWxUWDLhFwnMpQ1WHfrCRGFKj1GLiTVQv7cJlsaEMizpWRi4yKPcZQJrTKiKljJMmRwYQLEwISgSohnshu0ucLBSYKMiZsH10EgAlYSDqQYW9ZOlwpb4LWEuMeuyAAmR1ocNCaycfiV1kHrrgWHuk9m/ma+g745wPQkvvv/h/jLkqm6RPdfby4tQ2Fc/F9l8tj7DKnWCVX3P/BCtxCdoxX+VVvI8rSCPWkBVTaBGhSIu52ip+zpJYQl9s0O5q3mfwwNGMGyy7qRZJrDGEk4aX0qJWMi94SHBvQUJtgQFsGkIgimG+qMsFZqgqQUp3BnbC02cGvPfBcWQsNmforGdgFtMBko7XHHRHYFKBv64ytfEhkOG2K71EHBCBrugPRloAs4oxr0LiIKloo+2Jdyf1tz1qIhC4HRYuwTy0K7BGCyk8Ysh3izwxaGSeYuRwiCABfJQ2aVWRr46mFAXF2gsopMJe6KqQ2QOmOsaIoRgsBS6HvfGBqFBFzhDzM/6XV60UxYs5TEL0Bosd0udTyGFzusugzCEUzoIsBiuLUGXi1aw4HDN8ZGF1MsBBpWhHbZMQEiVx0A5185OSBMLVeW9HymBpNn0ZL4w9Jv8nR43G/HBZmNPNBsOOfv4Ga4+0WzGe8Y7mo0ZbzbJdc7HTr/ZqNXV4cYHqbCMssElUrvS1yfvleklQLr0hQ6SwgZb44UCSESoOIaVBVIO1rnDWoteQ3+vhWLx6nQqgQlMNCNHi/0lON7KE9gxnwg6uAj7+7hQQ3cpHII8GGEwiT3o7eo6CjwlR5Hvoqw48EpGOljudaWY1sANhxBDZeTsMWag7UH7QQpCGfwcx/q9cLlVNoRxHIu2HDk7uESLE9QB07pzGprFu7ljPsEd/avcoeNH/HEO2ZvsMSl7IKpKukeEdoSBW59h3SNw+Ew6D3evJ3cAyOGDKoFAW6hTd6xZJmKhQwWwcL2jcFKZTniCEquDnoGEHj3zdkOnXoTQNsbws7TpJ34wd/+suPkfuabxSDgRAAA=</data>
+        <length>1832</length>
+        <position>1</position>
+        <sys_attachment display_value="now-logo.svg" sys_id="f2055fcf2c54b5504df14d5b50ccf516">f2055fcf2c54b5504df14d5b50ccf516</sys_attachment>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:53</sys_created_on>
+        <sys_id>f6055fcf0054b550c531587441161d16</sys_id>
+    </sys_attachment_doc>
+</record_update>

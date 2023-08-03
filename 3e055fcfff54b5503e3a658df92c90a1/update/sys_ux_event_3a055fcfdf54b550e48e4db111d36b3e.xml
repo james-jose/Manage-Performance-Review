@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_event">
+    <sys_ux_event action="INSERT_OR_UPDATE">
+        <description/>
+        <event_name>COMPLETE_BUTTON_CLICK</event_name>
+        <interfaces/>
+        <label>complete button click</label>
+        <props>[{"name":"sysId","fieldType":"","label":"Record Id","interfaceApiName":"","typeMetadata":null,"mandatory":false,"readOnly":false},{"name":"status","fieldType":"","label":"Status","interfaceApiName":"","typeMetadata":null,"mandatory":false,"readOnly":false}]</props>
+        <required_translations>[{"message":"Record Id","comment":""},{"message":"Status","comment":""}]</required_translations>
+        <schema_version>1.0.0</schema_version>
+        <sys_class_name>sys_ux_event</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:44:56</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>3a055fcfdf54b550e48e4db111d36b3e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>complete button click</sys_name>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name>sys_ux_event_3a055fcfdf54b550e48e4db111d36b3e</sys_update_name>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:44:56</sys_updated_on>
+    </sys_ux_event>
+</record_update>

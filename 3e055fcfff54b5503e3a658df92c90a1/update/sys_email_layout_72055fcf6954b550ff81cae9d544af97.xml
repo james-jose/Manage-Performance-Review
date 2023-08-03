@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_email_layout">
+    <sys_email_layout action="INSERT_OR_UPDATE">
+        <advanced>false</advanced>
+        <advanced_layout><![CDATA[<html>
+<head>
+<style>
+div.card {
+  width: 600px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  text-align: center;
+}
+
+div.header {
+  background-color: #161B1C;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 40px;
+}
+
+div.container1 {
+  background-color: #ffffff;
+  color: black;
+  padding: 5px;
+}
+	
+div.container2 {
+  padding: 5px;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="header">
+    <h1>${mail_script:performance_appraisal_company_name}</h1>
+  </div>
+
+  <div class="container1">
+    <p>${notification:body}</p>
+  </div>
+	
+  <div class="container2">
+	<p><img style="display: block; margin-left: auto; margin-right: auto; width: 100%;" title="" src="sys_attachment.do?sys_id=9e100d5bdb94e810f16b5ce4dc96192a" alt=""/></p>
+    <p>${mail_script:performance_appraisal_footer}</p>
+  </div>
+</div>
+
+</body>
+</html>
+]]></advanced_layout>
+        <description/>
+        <layout><![CDATA[<p><br /></p>
+<table style="border: 1px solid gray; width: 602px; position: relative;">
+<tbody>
+<tr>
+<td style="background-color: #161b1c; color: #ffffff; padding-top: 15px; padding-bottom: 15px; border-top-right-radius: 5px; border-top-left-radius: 5px; width: 608px; text-align: center;">
+<h3 style="padding-left: 20px; font-size: 16pt; color: #ffffff;"><span style="font-family: 'trebuchet ms', geneva;">${mail_script:pr_co_name}</span></h3>
+</td>
+</tr>
+<tr>
+<td style="padding-left: 5px; padding-right: 5px; padding-top: 20px;">
+<p class="p1" style="font-family: arial, helvetica, 'sans serif'; font-size: 16pt; color: #ffffff; text-align: center;"><span style="color: #000000; font-family: 'trebuchet ms', geneva;">${notification:body}</span></p>
+</td>
+</tr>
+<tr>
+<td style="padding-left: 5px; padding-right: 5px; padding-top: 20px;">
+<p><span style="font-family: 'trebuchet ms', geneva;"><img style="align: middle;" src="x_sisy_manage_pe_0.performance_review.jpgx" width="600" height="312" align="middle" /></span></p>
+<p style="text-align: center; font-family: helvetica; font-size: 12px; color: #293e40;"><span style="font-family: tahoma, arial, helvetica, sans-serif;">${mail_script:pr_footer}</span></p>
+<p style="text-align: center; font-family: helvetica; font-size: 12px; color: #293e40;"><span style="font-family: tahoma, arial, helvetica, sans-serif;"></span><br /></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><br /></p>]]></layout>
+        <name>Performance Review Layout</name>
+        <sys_class_name>sys_email_layout</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>72055fcf6954b550ff81cae9d544af97</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Performance Review Layout</sys_name>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name>sys_email_layout_72055fcf6954b550ff81cae9d544af97</sys_update_name>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:58</sys_updated_on>
+    </sys_email_layout>
+</record_update>

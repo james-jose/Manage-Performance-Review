@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="3a055fcf5954b5507efec2f7e4584851" sys_domain="global" table="x_sisy_manage_pe_0_performance_review" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>james.jose</sys_created_by>
+            <sys_created_on>2023-08-01 17:45:58</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>be055fcf6d54b55045382c6cedbda451</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_sisy_manage_pe_0_performance_review" name="x_sisy_manage_pe_0_performance_review" sys_domain="global" view="3e055fcf4754b550ce0433fc7680d251">3a055fcf5954b5507efec2f7e4584851</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_sisy_manage_pe_0_performance_review" sys_domain="global" view="3e055fcf4754b550ce0433fc7680d251">b6055fcfee54b550fe639c3c7c0b6551</sys_ui_section>
+            <sys_updated_by>james.jose</sys_updated_by>
+            <sys_updated_on>2023-08-01 17:45:58</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>james.jose</sys_created_by>
+            <sys_created_on>2023-08-01 17:45:58</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ba055fcf3e54b550c01280dc1c4bb351</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_sisy_manage_pe_0_performance_review" name="x_sisy_manage_pe_0_performance_review" sys_domain="global" view="3e055fcf4754b550ce0433fc7680d251">3a055fcf5954b5507efec2f7e4584851</sys_ui_form>
+            <sys_ui_section caption="Work Performance" display_value="Work Performance" name="x_sisy_manage_pe_0_performance_review" sys_domain="global" view="3e055fcf4754b550ce0433fc7680d251">76055fcfc554b550703fe481ce622851</sys_ui_section>
+            <sys_updated_by>james.jose</sys_updated_by>
+            <sys_updated_on>2023-08-01 17:45:58</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>james.jose</sys_created_by>
+            <sys_created_on>2023-08-01 17:45:58</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>36055fcf1454b5507dc6b48489d12451</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_sisy_manage_pe_0_performance_review" name="x_sisy_manage_pe_0_performance_review" sys_domain="global" view="3e055fcf4754b550ce0433fc7680d251">3a055fcf5954b5507efec2f7e4584851</sys_ui_form>
+            <sys_ui_section caption="Work Traits" display_value="Work Traits" name="x_sisy_manage_pe_0_performance_review" sys_domain="global" view="3e055fcf4754b550ce0433fc7680d251">fa055fcfbf54b5508cc0e26fca754951</sys_ui_section>
+            <sys_updated_by>james.jose</sys_updated_by>
+            <sys_updated_on>2023-08-01 17:45:58</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>james.jose</sys_created_by>
+            <sys_created_on>2023-08-01 17:45:58</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>72055fcf3054b5504502c50e0a4d6f50</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_sisy_manage_pe_0_performance_review" name="x_sisy_manage_pe_0_performance_review" sys_domain="global" view="3e055fcf4754b550ce0433fc7680d251">3a055fcf5954b5507efec2f7e4584851</sys_ui_form>
+            <sys_ui_section caption="Feedback" display_value="Feedback" name="x_sisy_manage_pe_0_performance_review" sys_domain="global" view="3e055fcf4754b550ce0433fc7680d251">72055fcf0d54b550c044caa21260ca51</sys_ui_section>
+            <sys_updated_by>james.jose</sys_updated_by>
+            <sys_updated_on>2023-08-01 17:45:58</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_sisy_manage_pe_0_performance_review</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>james.jose</sys_created_by>
+            <sys_created_on>2023-08-01 17:45:58</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3a055fcf5954b5507efec2f7e4584851</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_sisy_manage_pe_0_performance_review</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+            <sys_update_name>sys_ui_form_sections_3a055fcf5954b5507efec2f7e4584851</sys_update_name>
+            <sys_updated_by>james.jose</sys_updated_by>
+            <sys_updated_on>2023-08-01 17:45:58</sys_updated_on>
+            <sys_user/>
+            <view display_value="Manager Review (x_sisy_manage_pe_0)" name="manager_review_x_sisy_manage_pe_0">3e055fcf4754b550ce0433fc7680d251</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_page_property">
+    <sys_ux_page_property action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>contains reference to the sys_aw_global_search_config record and the page (612675ca2cb82010f87744bfcc0ea34b)</description>
+        <name>global_search_configurations</name>
+        <page display_value="Manage-Performance-Review Workspace">72055fcfcc54b5502fc81280966151a1</page>
+        <required_translations>[]</required_translations>
+        <route/>
+        <suffix/>
+        <sys_class_name>sys_ux_page_property</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:46:08</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>global</sys_domain_path>
+        <sys_id>b6055fcf0e54b550a2d39e2a71c01621</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>global_search_configurations</sys_name>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name>sys_ux_page_property_b6055fcf0e54b550a2d39e2a71c01621</sys_update_name>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:46:08</sys_updated_on>
+        <type>json</type>
+        <unique_name>x_sisy_manage_pe_0.72055fcfcc54b5502fc81280966151a1.root.global_search_configurations</unique_name>
+        <value>{
+    "globalSearchViewConfigId": "612675ca2cb82010f87744bfcc0ea34b",
+"globalSearchRoute": "search-results"
+}</value>
+    </sys_ux_page_property>
+    <sys_translated_text action="delete_multiple" query="documentkey=b6055fcf0e54b550a2d39e2a71c01621"/>
+</record_update>

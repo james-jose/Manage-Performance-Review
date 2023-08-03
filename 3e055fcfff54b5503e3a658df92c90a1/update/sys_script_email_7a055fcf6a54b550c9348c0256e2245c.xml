@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>x_sisy_manage_pe_0.pr_emp_eval</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function runMailScript( /* GlideRecord */ current, /* TemplatePrinter */ template,
+    /* Optional EmailOutbound */
+    email, /* Optional GlideRecord */ email_action,
+    /* Optional GlideRecord */
+    event) {
+	
+	var sysID = current.sys_id;
+	var state = current.state;
+	var instance = gs.getProperty('glide.servlet.uri');
+	var link = instance + 'x/sisy/x_sisy_manage_pe_0-pr/portal/emp-evaluation/' + sysID + '/' + state;
+    template.print('<font face="helvetica">');
+
+    var color = 'color: #ffffff;';
+    var fontSize = 'font-size: 12px;';
+    var textDecoration = 'text-decoration: none; border-radius: 3px;';
+
+    template.print('<a href="' + link + '"');
+	template.print('style="' + color + fontSize + textDecoration);
+    template.print('">');
+    template.print(gs.getMessage('CONTINUE EVALUATION'));
+    template.print('</a>');
+
+    template.print('</font>');
+
+})(current, template, email, email_action, event);]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:31</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>7a055fcf6a54b550c9348c0256e2245c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_sisy_manage_pe_0.pr_emp_eval</sys_name>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name>sys_script_email_7a055fcf6a54b550c9348c0256e2245c</sys_update_name>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:31</sys_updated_on>
+    </sys_script_email>
+</record_update>

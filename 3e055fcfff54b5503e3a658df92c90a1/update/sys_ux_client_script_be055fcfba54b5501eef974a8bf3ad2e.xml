@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <includes/>
+        <macroponent display_value="Landing page">3e055fcf0654b5506cf8f26cf9d5e82f</macroponent>
+        <name>PR_calculate_state_values</name>
+        <preset/>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ */
+function handler({
+    api,
+    event,
+    helpers,
+    imports
+}) {
+
+
+    const {
+        data,
+        state,
+        setState,
+        context
+    } = api;
+
+    const propNames = {
+        propName1: 'x_sisy_manage_pe_0.end_date'
+    };
+
+     const {
+        snHttp
+    } = helpers;
+
+    // To calculate the remaining days to complete the review 
+    const prompt_date = snHttp('/api/x_sisy_manage_pe_0/prop_mgmt?property_name=' + propNames.propName1, {
+        method: 'GET',
+        batch: false,
+    }).then(response => {
+
+        var now = new Date();
+        // returns review date in msec
+        var review_date = Date.parse(response.response.result.end_date.toString());
+        var diff = review_date - now.getTime();
+        var noOfDays = Math.round(diff / (1000 * 60 * 60 * 24)).toFixed(0);
+        if (noOfDays > 0)
+            setState('moreDays', noOfDays);
+       
+    }).catch(error => {
+        console.log(error.message);
+    });
+
+    // To calculate the totalRecCount
+    const currentUser = api.context.session.user.sys_id;
+    // stats is to do aggregate API, gets the count (sysparm_count)
+    snHttp("/api/now/stats/x_sisy_manage_pe_0_performance_review?sysparm_count=true&sysparm_query=active=true^manager.sys_id=" + currentUser, {
+        method: "GET",
+        batch: false,
+    }).then(response => {
+        if (response.response.result.stats.count > 0) {
+
+            setState('totalRecCount', response.response.result.stats.count);
+
+        }
+    }).catch(error => {
+        console.log('Error');
+    });
+
+    // calculate totalRecConfirmed State
+    snHttp("/api/now/stats/x_sisy_manage_pe_0_performance_review?sysparm_count=true&sysparm_query=active=true^state=confirmed^manager.sys_id=" + currentUser, {
+        method: "GET",
+        batch: false,
+    }).then(response => {
+        if (response.response.result.stats.count > 0) {
+
+            setState('totalRecConfirmed', response.response.result.stats.count);
+
+        }
+    }).catch(error => {
+        console.log('Error');
+    });
+
+    // calculate totalRecInProgress State
+    snHttp("/api/now/stats/x_sisy_manage_pe_0_performance_review?sysparm_count=true&sysparm_query=active=true^state!=confirmed^state !=draft^manager.sys_id=" + currentUser, {
+        method: "GET",
+        batch: false,
+    }).then(response => {
+        if (response.response.result.stats.count > 0) {
+
+            setState('totalRecInProgress', response.response.result.stats.count);
+
+        }
+    }).catch(error => {
+        console.log('Error');
+    });
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:35</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>be055fcfba54b5501eef974a8bf3ad2e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PR_calculate_state_values</sys_name>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name>sys_ux_client_script_be055fcfba54b5501eef974a8bf3ad2e</sys_update_name>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:35</sys_updated_on>
+        <target/>
+        <type/>
+    </sys_ux_client_script>
+</record_update>

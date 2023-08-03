@@ -1,0 +1,1071 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>a4832d21db602050f16b5ce4dc961908</copied_from>
+        <copied_from_name>Performance Reviews - Create rec</copied_from_name>
+        <description>Subflow to trigger review records on date indicated by sys_properties.</description>
+        <internal_name>x_sisy_manage_pe_0.perf_review__create_r</internal_name>
+        <label_cache>[{"name":"bdd2d294-0868-4622-a284-44af94e23701.item.title","label":"2➛User Record➛Title","reference":"","reference_display":"Title","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"title"},{"name":"bdd2d294-0868-4622-a284-44af94e23701.item.manager.sys_id","label":"2➛User Record➛Manager➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_user","column_name":"sys_id"},{"name":"subflow.review_reminder","label":"Input➛review_reminder","reference":"","reference_display":"","type":"glide_date","base_type":"glide_date","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"6999778e-4cc3-43d5-96b5-c830c15aa09a"}},{"name":"subflow.review_period_name","label":"Input➛review_period_name","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5ed7f0ac-9e9f-4808-9117-f17d7f89a537","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.evaluation_due","label":"Input➛Evaluation Due","reference":"","reference_display":"","type":"glide_date","base_type":"glide_date","column_name":"","attributes":{"uiType":"glide_date","uiTypeLabel":"Date","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"b503b3df-3010-400c-bc8b-6e2ccba1dc36","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"4c2ffc50-c31f-4f41-be49-cf22e5e7f363.item","label":"4➛Performance Review Record","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"0c3cf9be-b353-4570-b83f-6385b51358f8.Count","label":"4➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"0c3cf9be-b353-4570-b83f-6385b51358f8.Table","label":"4➛Performance Review Table","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"0c3cf9be-b353-4570-b83f-6385b51358f8.Records","label":"4➛Performance Review Records","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"5d9960a1-8224-49ca-9791-ad9947ce9afa.Count","label":"4➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"5d9960a1-8224-49ca-9791-ad9947ce9afa.Table","label":"4➛Performance Review Table","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"5d9960a1-8224-49ca-9791-ad9947ce9afa.Records","label":"4➛Performance Review Records","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"dad448b0-bdb0-422f-8bf8-0da4ec61494a.scheduled_end_date_time","label":"4➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"dad448b0-bdb0-422f-8bf8-0da4ec61494a.total_duration","label":"4➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"subflow.deadline_date","label":"Input➛Deadline Date","reference":"","reference_display":"","type":"glide_date","base_type":"glide_date","column_name":"","attributes":{"uiType":"glide_date","uiTypeLabel":"Date","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"9dd73296-90ea-49e1-8935-7055d6625d8f","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"b38b654d-beff-4782-b661-aafa005ac6c1.item","label":"5➛Performance Review Record","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"251cdbe6-1d75-4ae0-9721-5e30eaa5bebf.item","label":"6➛Performance Review Record","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"7b172ee8-dfe1-4554-91b3-350ab6cdd136.Count","label":"5➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7b172ee8-dfe1-4554-91b3-350ab6cdd136.Table","label":"5➛Performance Review Table","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7b172ee8-dfe1-4554-91b3-350ab6cdd136.Records","label":"5➛Performance Review Records","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.notification_reminder","label":"Input➛Notification Reminder","reference":"","reference_display":"","type":"calendar_date_time","base_type":"calendar_date_time","column_name":"","attributes":{"uiType":"glide_date","uiTypeLabel":"Date","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"aaf5f20b-f5ac-4727-bfc3-0f362ae53acd","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.reminder_time","label":"Input➛Reminder Time","reference":"","reference_display":"","type":"datetime","base_type":"datetime","column_name":"","attributes":{"uiType":"timer","uiTypeLabel":"Timer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"839989c4-a86f-45cb-bbe0-c00068ef237f","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"5765f617-3824-4a78-8d4c-b7be9422ba95.scheduled_end_date_time","label":"4➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"5765f617-3824-4a78-8d4c-b7be9422ba95.total_duration","label":"4➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"29a1b221-9afe-4457-b0ae-c91a01981731.scheduled_end_date_time","label":"2➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"29a1b221-9afe-4457-b0ae-c91a01981731.total_duration","label":"2➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"subflow.filter_criteria","label":"Input➛Filter Criteria","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"6f18c159-da2c-4b6f-bdaa-86578be6346c","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"0bce1ada-e8a9-40c5-a70f-f668afb9fefe.Record","label":"1➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"0bce1ada-e8a9-40c5-a70f-f668afb9fefe.Table","label":"1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"0bce1ada-e8a9-40c5-a70f-f668afb9fefe.status","label":"1➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"0bce1ada-e8a9-40c5-a70f-f668afb9fefe.error_message","label":"1➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"87687532-9e3d-4497-a88e-90f45bfb9adb"}},{"name":"54f6210f-6503-4645-b602-6e08fd7814f8.Records","label":"1➛User Records","reference":"sys_user","reference_display":"User","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"54f6210f-6503-4645-b602-6e08fd7814f8.Table","label":"1➛User Table","reference":"sys_user","reference_display":"User","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"54f6210f-6503-4645-b602-6e08fd7814f8.Count","label":"1➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"bdd2d294-0868-4622-a284-44af94e23701.item","label":"2➛User Record","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"68c60955-11b7-43fa-ab9f-f4986d9d3113.record","label":"3➛Performance Review Record","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"68c60955-11b7-43fa-ab9f-f4986d9d3113.table_name","label":"3➛Performance Review Table","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"bdd2d294-0868-4622-a284-44af94e23701.item.sys_id","label":"2➛User Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_user","column_name":"sys_id"},{"name":"68c60955-11b7-43fa-ab9f-f4986d9d3113.record.sys_created_on","label":"3➛Performance Review Record➛Created","reference":"","reference_display":"Created","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_snc_perf_review_performance_review","column_name":"sys_created_on"},{"name":"4dbd8626-cba9-4941-ae13-ea7df5c7f777.item","label":"4➛Performance Review Record","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"316c2638-7780-416b-95c5-9cbb5e25971e.Records","label":"4➛Performance Review Records","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"316c2638-7780-416b-95c5-9cbb5e25971e.Table","label":"4➛Performance Review Table","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"316c2638-7780-416b-95c5-9cbb5e25971e.Count","label":"4➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"5f8118db-59fe-457c-9b54-5c5057537b3e.item","label":"4➛Performance Review Record","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"3ee6aa47-49b1-4044-aa0a-89a3f605502a.item","label":"4➛Performance Review Record","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"aab4f3ab-2229-4de4-9da3-3559d165cb78.Records","label":"4➛Performance Review Records","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"aab4f3ab-2229-4de4-9da3-3559d165cb78.Table","label":"4➛Performance Review Table","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"aab4f3ab-2229-4de4-9da3-3559d165cb78.Count","label":"4➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master_snapshot>3a055fcfce54b55010a2f7aea75ca370</master_snapshot>
+        <name>Perf Review - Create records</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>be055fcf1354b550190d253f6bfeb19f</remote_trigger_id>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>ba055fcfdc54b550a0f84629cfc27965</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Perf Review - Create records</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name>sys_hub_flow_ba055fcfdc54b550a0f84629cfc27965</sys_update_name>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:12</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow>
+    <sys_variable_value action="delete_multiple" query="document_key=ba055fcfdc54b550a0f84629cfc27965"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=ba055fcfdc54b550a0f84629cfc27965"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=ba055fcfdc54b550a0f84629cfc27965"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=ba055fcfdc54b550a0f84629cfc27965^sys_idNOT IN3a055fcfe254b55085737e7fe604a865"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>ba055fcfdc54b550a0f84629cfc27965</id>
+        <name>Perf Review - Create records</name>
+        <sys_class_name>sys_flow_cat_variable_model</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>3a055fcfe254b55085737e7fe604a865</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:12</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=3a055fcfe254b55085737e7fe604a865"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=ba055fcfdc54b550a0f84629cfc27965^sys_idNOT IN32055fcfe254b5505d8a264b27d4ac65,b2055fcfcb54b550f1296f2f36c37d65,f2055fcf3654b5505cd844dc3c04c665"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=5ed7f0ac-9e9f-4808-9117-f17d7f89a537</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>review_period_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>review_period_name</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Perf Review - Create records">ba055fcfdc54b550a0f84629cfc27965</model>
+        <model_id>ba055fcfdc54b550a0f84629cfc27965</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_ba055fcfdc54b550a0f84629cfc27965</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>32055fcfe254b5505d8a264b27d4ac65</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:12</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=6f18c159-da2c-4b6f-bdaa-86578be6346c</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>filter_criteria</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Filter Criteria</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Perf Review - Create records">ba055fcfdc54b550a0f84629cfc27965</model>
+        <model_id>ba055fcfdc54b550a0f84629cfc27965</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_ba055fcfdc54b550a0f84629cfc27965</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>b2055fcfcb54b550f1296f2f36c37d65</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:12</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=glide_date,uiTypeLabel=Date,uiUniqueId=b503b3df-3010-400c-bc8b-6e2ccba1dc36</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>evaluation_due</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">glide_date</internal_type>
+        <label>Evaluation Due</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Perf Review - Create records">ba055fcfdc54b550a0f84629cfc27965</model>
+        <model_id>ba055fcfdc54b550a0f84629cfc27965</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_ba055fcfdc54b550a0f84629cfc27965</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>f2055fcf3654b5505cd844dc3c04c665</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:12</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_output action="delete_multiple" query="model=ba055fcfdc54b550a0f84629cfc27965"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=ba055fcfdc54b550a0f84629cfc27965"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=ba055fcfdc54b550a0f84629cfc27965^sys_idNOT IN36055fcf5254b550f8b752343d57a765,f6055fcf3254b550e71fae7d2c64f464"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <comment>Look up User records that match encoded query</comment>
+        <display_text/>
+        <flow display_value="Perf Review - Create records">ba055fcfdc54b550a0f84629cfc27965</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>36055fcf5254b550f8b752343d57a765</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:12</sys_updated_on>
+        <ui_id>54f6210f-6503-4645-b602-6e08fd7814f8</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=36055fcf5254b550f8b752343d57a765"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>36055fcf5254b550f8b752343d57a765</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:12</sys_created_on>
+        <sys_id>76055fcf7354b5502ef14b5cbe1c0f65</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:12</sys_updated_on>
+        <value>sys_user</value>
+        <variable display_value="Table">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=36055fcf5254b550f8b752343d57a765"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>36055fcf5254b550f8b752343d57a765</id>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:12</sys_created_on>
+        <sys_id>72055fcfe554b550e8a51933f0e7e265</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:12</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value>{{subflow.filter_criteria}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=36055fcf5254b550f8b752343d57a765"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=36055fcf5254b550f8b752343d57a765"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="Perf Review - Create records">ba055fcfdc54b550a0f84629cfc27965</flow>
+        <order>3</order>
+        <parent_ui_id>bdd2d294-0868-4622-a284-44af94e23701</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>f6055fcf3254b550e71fae7d2c64f464</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:12</sys_updated_on>
+        <ui_id>68c60955-11b7-43fa-ab9f-f4986d9d3113</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=f6055fcf3254b550e71fae7d2c64f464"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>f6055fcf3254b550e71fae7d2c64f464</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:12</sys_created_on>
+        <sys_id>3e055fcfaa54b5502cdd6f7c2cbbee64</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:12</sys_updated_on>
+        <value>x_sisy_manage_pe_0_performance_review</value>
+        <variable display_value="Table">61e05916c31332002841b63b12d3aee4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=f6055fcf3254b550e71fae7d2c64f464"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>f6055fcf3254b550e71fae7d2c64f464</id>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:12</sys_created_on>
+        <sys_id>fe055fcf1a54b550e08d726cf8756664</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:12</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value>employee={{bdd2d294-0868-4622-a284-44af94e23701.item.sys_id}}^manager={{bdd2d294-0868-4622-a284-44af94e23701.item.manager.sys_id}}^title={{bdd2d294-0868-4622-a284-44af94e23701.item.title}}^evaluation_sent_out=fd-scripted^evaluation_due={{subflow.evaluation_due}}^review_period={{subflow.review_period_name}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=f6055fcf3254b550e71fae7d2c64f464^sys_idNOT INfa055fcf5354b5504c6c69a6ffd44364"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>values</input_name>
+        <instance>f6055fcf3254b550e71fae7d2c64f464</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"evaluation_sent_out":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\nvar today \u003d new GlideDateTime().getDate();\nreturn today;","savedValue":""}}</script>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:12</sys_created_on>
+        <sys_id>fa055fcf5354b5504c6c69a6ffd44364</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:12</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=f6055fcf3254b550e71fae7d2c64f464"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=ba055fcfdc54b550a0f84629cfc27965"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=ba055fcfdc54b550a0f84629cfc27965^sys_idNOT IN3a055fcfcc54b550cec083eeeeef3664"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">7a055fcfb454b550fd506cbe084d7664</block>
+        <comment>Create a Review record for each employee in query</comment>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Perf Review - Create records">ba055fcfdc54b550a0f84629cfc27965</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>3a055fcfcc54b550cec083eeeeef3664</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:12</sys_updated_on>
+        <ui_id>bdd2d294-0868-4622-a284-44af94e23701</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=3a055fcfcc54b550cec083eeeeef3664"/>
+    <sys_element_mapping action="delete_multiple" query="id=3a055fcfcc54b550cec083eeeeef3664"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>items</field>
+        <id>3a055fcfcc54b550cec083eeeeef3664</id>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:12</sys_created_on>
+        <sys_id>7e055fcfb654b550a5d6fc981e082864</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:12</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
+        <value>{{54f6210f-6503-4645-b602-6e08fd7814f8.Records}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=3a055fcfcc54b550cec083eeeeef3664"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=3a055fcfcc54b550cec083eeeeef3664"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=ba055fcfdc54b550a0f84629cfc27965"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=ba055fcfdc54b550a0f84629cfc27965"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_ba055fcfdc54b550a0f84629cfc27965"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_ba055fcfdc54b550a0f84629cfc27965"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_ba055fcfdc54b550a0f84629cfc27965"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_ba055fcfdc54b550a0f84629cfc27965"/>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=ba055fcfdc54b550a0f84629cfc27965"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=ba055fcfdc54b550a0f84629cfc27965^sys_idNOT INbe055fcf6754b550526d39a31bfd1a64"/>
+    <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
+        <plan>com.snc.process_flow.engine.ProcessPlan@781077b1</plan>
+        <plan_id display_value="Perf Review - Create records">ba055fcfdc54b550a0f84629cfc27965</plan_id>
+        <snapshot>526edc52dd8ee010f8773b70f0ff1982</snapshot>
+        <sys_class_name>sys_flow_subflow_plan</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>be055fcf6754b550526d39a31bfd1a64</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:12</sys_updated_on>
+    </sys_flow_subflow_plan>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Subflow to trigger review records on date indicated by sys_properties.</description>
+        <internal_name>x_sisy_manage_pe_0.perf_review__create_r</internal_name>
+        <label_cache>[{"name":"bdd2d294-0868-4622-a284-44af94e23701.item.title","label":"2➛User Record➛Title","reference":"","reference_display":"Title","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"title"},{"name":"bdd2d294-0868-4622-a284-44af94e23701.item.manager.sys_id","label":"2➛User Record➛Manager➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_user","column_name":"sys_id"},{"name":"subflow.review_reminder","label":"Input➛review_reminder","reference":"","reference_display":"","type":"glide_date","base_type":"glide_date","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"6999778e-4cc3-43d5-96b5-c830c15aa09a"}},{"name":"subflow.review_period_name","label":"Input➛review_period_name","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5ed7f0ac-9e9f-4808-9117-f17d7f89a537","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.evaluation_due","label":"Input➛Evaluation Due","reference":"","reference_display":"","type":"glide_date","base_type":"glide_date","column_name":"","attributes":{"uiType":"glide_date","uiTypeLabel":"Date","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"b503b3df-3010-400c-bc8b-6e2ccba1dc36","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"4c2ffc50-c31f-4f41-be49-cf22e5e7f363.item","label":"4➛Performance Review Record","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"0c3cf9be-b353-4570-b83f-6385b51358f8.Count","label":"4➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"0c3cf9be-b353-4570-b83f-6385b51358f8.Table","label":"4➛Performance Review Table","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"0c3cf9be-b353-4570-b83f-6385b51358f8.Records","label":"4➛Performance Review Records","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"5d9960a1-8224-49ca-9791-ad9947ce9afa.Count","label":"4➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"5d9960a1-8224-49ca-9791-ad9947ce9afa.Table","label":"4➛Performance Review Table","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"5d9960a1-8224-49ca-9791-ad9947ce9afa.Records","label":"4➛Performance Review Records","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"dad448b0-bdb0-422f-8bf8-0da4ec61494a.scheduled_end_date_time","label":"4➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"dad448b0-bdb0-422f-8bf8-0da4ec61494a.total_duration","label":"4➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"subflow.deadline_date","label":"Input➛Deadline Date","reference":"","reference_display":"","type":"glide_date","base_type":"glide_date","column_name":"","attributes":{"uiType":"glide_date","uiTypeLabel":"Date","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"9dd73296-90ea-49e1-8935-7055d6625d8f","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"b38b654d-beff-4782-b661-aafa005ac6c1.item","label":"5➛Performance Review Record","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"251cdbe6-1d75-4ae0-9721-5e30eaa5bebf.item","label":"6➛Performance Review Record","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"7b172ee8-dfe1-4554-91b3-350ab6cdd136.Count","label":"5➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7b172ee8-dfe1-4554-91b3-350ab6cdd136.Table","label":"5➛Performance Review Table","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7b172ee8-dfe1-4554-91b3-350ab6cdd136.Records","label":"5➛Performance Review Records","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.notification_reminder","label":"Input➛Notification Reminder","reference":"","reference_display":"","type":"calendar_date_time","base_type":"calendar_date_time","column_name":"","attributes":{"uiType":"glide_date","uiTypeLabel":"Date","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"aaf5f20b-f5ac-4727-bfc3-0f362ae53acd","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.reminder_time","label":"Input➛Reminder Time","reference":"","reference_display":"","type":"datetime","base_type":"datetime","column_name":"","attributes":{"uiType":"timer","uiTypeLabel":"Timer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"839989c4-a86f-45cb-bbe0-c00068ef237f","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"5765f617-3824-4a78-8d4c-b7be9422ba95.scheduled_end_date_time","label":"4➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"5765f617-3824-4a78-8d4c-b7be9422ba95.total_duration","label":"4➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"29a1b221-9afe-4457-b0ae-c91a01981731.scheduled_end_date_time","label":"2➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"29a1b221-9afe-4457-b0ae-c91a01981731.total_duration","label":"2➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"subflow.filter_criteria","label":"Input➛Filter Criteria","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"6f18c159-da2c-4b6f-bdaa-86578be6346c","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"0bce1ada-e8a9-40c5-a70f-f668afb9fefe.Record","label":"1➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"0bce1ada-e8a9-40c5-a70f-f668afb9fefe.Table","label":"1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"0bce1ada-e8a9-40c5-a70f-f668afb9fefe.status","label":"1➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"0bce1ada-e8a9-40c5-a70f-f668afb9fefe.error_message","label":"1➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"87687532-9e3d-4497-a88e-90f45bfb9adb"}},{"name":"54f6210f-6503-4645-b602-6e08fd7814f8.Records","label":"1➛User Records","reference":"sys_user","reference_display":"User","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"54f6210f-6503-4645-b602-6e08fd7814f8.Table","label":"1➛User Table","reference":"sys_user","reference_display":"User","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"54f6210f-6503-4645-b602-6e08fd7814f8.Count","label":"1➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"bdd2d294-0868-4622-a284-44af94e23701.item","label":"2➛User Record","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"68c60955-11b7-43fa-ab9f-f4986d9d3113.record","label":"3➛Performance Review Record","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"68c60955-11b7-43fa-ab9f-f4986d9d3113.table_name","label":"3➛Performance Review Table","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"bdd2d294-0868-4622-a284-44af94e23701.item.sys_id","label":"2➛User Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_user","column_name":"sys_id"},{"name":"68c60955-11b7-43fa-ab9f-f4986d9d3113.record.sys_created_on","label":"3➛Performance Review Record➛Created","reference":"","reference_display":"Created","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_snc_perf_review_performance_review","column_name":"sys_created_on"},{"name":"4dbd8626-cba9-4941-ae13-ea7df5c7f777.item","label":"4➛Performance Review Record","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"316c2638-7780-416b-95c5-9cbb5e25971e.Records","label":"4➛Performance Review Records","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"316c2638-7780-416b-95c5-9cbb5e25971e.Table","label":"4➛Performance Review Table","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"316c2638-7780-416b-95c5-9cbb5e25971e.Count","label":"4➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"5f8118db-59fe-457c-9b54-5c5057537b3e.item","label":"4➛Performance Review Record","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"3ee6aa47-49b1-4044-aa0a-89a3f605502a.item","label":"4➛Performance Review Record","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"aab4f3ab-2229-4de4-9da3-3559d165cb78.Records","label":"4➛Performance Review Records","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"aab4f3ab-2229-4de4-9da3-3559d165cb78.Table","label":"4➛Performance Review Table","reference":"x_snc_perf_review_performance_review","reference_display":"Performance Review","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"aab4f3ab-2229-4de4-9da3-3559d165cb78.Count","label":"4➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master>true</master>
+        <name>Perf Review - Create records</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Perf Review - Create records">ba055fcfdc54b550a0f84629cfc27965</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>3a055fcfce54b55010a2f7aea75ca370</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:12</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow_snapshot>
+    <sys_variable_value action="delete_multiple" query="document_key=3a055fcfce54b55010a2f7aea75ca370"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=3a055fcfce54b55010a2f7aea75ca370"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=3a055fcfce54b55010a2f7aea75ca370"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=3a055fcfce54b55010a2f7aea75ca370^sys_idNOT INba055fcfec54b550e90633ed7b920864"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>3a055fcfce54b55010a2f7aea75ca370</id>
+        <name>Perf Review - Create records</name>
+        <sys_class_name>sys_flow_cat_variable_model</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ba055fcfec54b550e90633ed7b920864</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:12</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=ba055fcfec54b550e90633ed7b920864"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=3a055fcfce54b55010a2f7aea75ca370^sys_idNOT IN76055fcf3154b5504b52dc0f4dba5564,b6055fcfbc54b55002ece28013f49e64,fa055fcff054b5508744ea04b63a2a70"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=6f18c159-da2c-4b6f-bdaa-86578be6346c</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>filter_criteria</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Filter Criteria</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Perf Review - Create records">3a055fcfce54b55010a2f7aea75ca370</model>
+        <model_id>3a055fcfce54b55010a2f7aea75ca370</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_3a055fcfce54b55010a2f7aea75ca370</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:13</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>76055fcf3154b5504b52dc0f4dba5564</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:13</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=5ed7f0ac-9e9f-4808-9117-f17d7f89a537</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>review_period_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>review_period_name</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Perf Review - Create records">3a055fcfce54b55010a2f7aea75ca370</model>
+        <model_id>3a055fcfce54b55010a2f7aea75ca370</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_3a055fcfce54b55010a2f7aea75ca370</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:13</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>b6055fcfbc54b55002ece28013f49e64</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:13</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=glide_date,uiTypeLabel=Date,uiUniqueId=b503b3df-3010-400c-bc8b-6e2ccba1dc36</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>evaluation_due</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">glide_date</internal_type>
+        <label>Evaluation Due</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Perf Review - Create records">3a055fcfce54b55010a2f7aea75ca370</model>
+        <model_id>3a055fcfce54b55010a2f7aea75ca370</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_3a055fcfce54b55010a2f7aea75ca370</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>fa055fcff054b5508744ea04b63a2a70</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:12</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_output action="delete_multiple" query="model=3a055fcfce54b55010a2f7aea75ca370"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=3a055fcfce54b55010a2f7aea75ca370"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=3a055fcfce54b55010a2f7aea75ca370^sys_idNOT INf2055fcf8a54b5504d34b7f93475e264,fe055fcfb554b550f5df0a6cd43b9463"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="Perf Review - Create records">3a055fcfce54b55010a2f7aea75ca370</flow>
+        <order>3</order>
+        <parent_ui_id>bdd2d294-0868-4622-a284-44af94e23701</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:13</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>f2055fcf8a54b5504d34b7f93475e264</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:13</sys_updated_on>
+        <ui_id>68c60955-11b7-43fa-ab9f-f4986d9d3113</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=f2055fcf8a54b5504d34b7f93475e264"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>f2055fcf8a54b5504d34b7f93475e264</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:13</sys_created_on>
+        <sys_id>fa055fcf8d54b5505b1b3b6c3bd8a163</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:13</sys_updated_on>
+        <value>x_sisy_manage_pe_0_performance_review</value>
+        <variable display_value="Table">61e05916c31332002841b63b12d3aee4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=f2055fcf8a54b5504d34b7f93475e264"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>f2055fcf8a54b5504d34b7f93475e264</id>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:13</sys_created_on>
+        <sys_id>be055fcfd254b5505a8e59c56b47a363</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:13</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value>employee={{bdd2d294-0868-4622-a284-44af94e23701.item.sys_id}}^manager={{bdd2d294-0868-4622-a284-44af94e23701.item.manager.sys_id}}^title={{bdd2d294-0868-4622-a284-44af94e23701.item.title}}^evaluation_sent_out=fd-scripted^evaluation_due={{subflow.evaluation_due}}^review_period={{subflow.review_period_name}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=f2055fcf8a54b5504d34b7f93475e264^sys_idNOT IN3e055fcfbd54b5502dd59808b39a7463"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>values</input_name>
+        <instance>f2055fcf8a54b5504d34b7f93475e264</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"evaluation_sent_out":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\nvar today \u003d new GlideDateTime().getDate();\nreturn today;","savedValue":""}}</script>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:13</sys_created_on>
+        <sys_id>3e055fcfbd54b5502dd59808b39a7463</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:13</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=f2055fcf8a54b5504d34b7f93475e264"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <comment>Look up User records that match encoded query</comment>
+        <display_text/>
+        <flow display_value="Perf Review - Create records">3a055fcfce54b55010a2f7aea75ca370</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:13</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>fe055fcfb554b550f5df0a6cd43b9463</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:13</sys_updated_on>
+        <ui_id>54f6210f-6503-4645-b602-6e08fd7814f8</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=fe055fcfb554b550f5df0a6cd43b9463"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>fe055fcfb554b550f5df0a6cd43b9463</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:13</sys_created_on>
+        <sys_id>32055fcfac54b550c584a28f272a7164</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:13</sys_updated_on>
+        <value>sys_user</value>
+        <variable display_value="Table">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=fe055fcfb554b550f5df0a6cd43b9463"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>fe055fcfb554b550f5df0a6cd43b9463</id>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:13</sys_created_on>
+        <sys_id>7e055fcf8454b550fa5af658609bb263</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:13</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value>{{subflow.filter_criteria}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=fe055fcfb554b550f5df0a6cd43b9463"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=fe055fcfb554b550f5df0a6cd43b9463"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=3a055fcfce54b55010a2f7aea75ca370"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=3a055fcfce54b55010a2f7aea75ca370^sys_idNOT IN36055fcf6b54b550decf28b8c348e964"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">7a055fcfb454b550fd506cbe084d7664</block>
+        <comment>Create a Review record for each employee in query</comment>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Perf Review - Create records">3a055fcfce54b55010a2f7aea75ca370</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:13</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>36055fcf6b54b550decf28b8c348e964</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:13</sys_updated_on>
+        <ui_id>bdd2d294-0868-4622-a284-44af94e23701</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=36055fcf6b54b550decf28b8c348e964"/>
+    <sys_element_mapping action="delete_multiple" query="id=36055fcf6b54b550decf28b8c348e964"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>items</field>
+        <id>36055fcf6b54b550decf28b8c348e964</id>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:13</sys_created_on>
+        <sys_id>72055fcf0354b5501722d34a2b3c4c64</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:13</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
+        <value>{{54f6210f-6503-4645-b602-6e08fd7814f8.Records}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=36055fcf6b54b550decf28b8c348e964"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=36055fcf6b54b550decf28b8c348e964"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=3a055fcfce54b55010a2f7aea75ca370"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=3a055fcfce54b55010a2f7aea75ca370"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_3a055fcfce54b55010a2f7aea75ca370^sys_idNOT INb2055fcf3a54b55054f8cd6d78ed3564"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>evaluation_due</element>
+        <help/>
+        <hint/>
+        <label>Evaluation Due</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_3a055fcfce54b55010a2f7aea75ca370</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:13</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>b2055fcf3a54b55054f8cd6d78ed3564</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Evaluation Due</sys_name>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_526edc52dd8ee010f8773b70f0ff1982_evaluation_due_en</sys_update_name>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:13</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_3a055fcfce54b55010a2f7aea75ca370"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_3a055fcfce54b55010a2f7aea75ca370"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_3a055fcfce54b55010a2f7aea75ca370"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>ba055fcfdc54b550a0f84629cfc27965</sys_id>
+        <latest_snapshot>3a055fcfce54b55010a2f7aea75ca370</latest_snapshot>
+        <compiler_build>glide-trackapptemplates-12-11-2020</compiler_build>
+    </sys_hub_flow>
+</record_update>

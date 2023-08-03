@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>Pull Properties</name>
+        <operation_script><![CDATA[(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+	//pull the property query param and convert to string
+	var propName = "";
+
+	if (request.queryParams.property_name.toString() != "none") {
+		propName = request.queryParams.property_name.toString();
+	}
+
+	//set a varaible to hold the response object
+	var respObj = {};
+
+	//set default status
+	var httpStatus = 200;
+
+	//if propName is not empty
+	if (!gs.nil(propName)) {
+
+		//convert the property name to be only the suffix("." will break the UI Builder)
+		var shortPropName = propName.substring((propName.indexOf(".") + 1));
+
+		//set just the one property with the suffix value
+		respObj[shortPropName] = gs.getProperty(propName);
+	}
+
+	//if no property name was supplied, pull all properties in the scope
+	else {
+
+		try {
+			//query the property table for all properties in the scope
+			var properties = new GlideRecord('sys_properties');
+			properties.addQuery('sys_scope.scope', 'x_sisy_manage_pe_0');
+			properties.orderBy('name');
+			properties.query();
+
+			//loop through all properties found
+			while (properties.next()) {
+
+				//set the property name to a variable
+				propName = properties.getValue('suffix');
+
+				if (properties.getValue('type') == 'date_format') {
+
+					//add the property to the response object
+					respObj[propName] = formatDate(properties.getValue('value'));
+
+					// format the end date eg : 12-31-2021 to Dec 31
+					if (propName == "end_date"){
+						var endDt = new GlideDate();
+						endDt.setValue(respObj[propName].toString());
+						respObj.format_end_date =  endDt.getByFormat('MMM dd');
+
+					}
+				} else {
+					//add the property to the response object
+					respObj[propName] = properties.getValue('value');
+				}
+			}
+		}
+
+		//if an error occurs
+		catch (err) {
+
+			//set status to denote an error occured
+			httpStatus = 500;
+
+			//generate the message
+			var msg = gs.getMessage('property_api_err', ["Property Query", err]);
+
+			//override the response object with the error message
+			respObj = {
+				"error_message": msg
+			};
+
+			//generate a log
+			gs.error(msg);
+		}
+
+		/******* Calculate and supply next review *******/
+
+		//if the review is manual
+		if (respObj.review_process_schedule == '0') {
+
+			//set the next review as empty
+			respObj.next_review = "";
+		}
+
+		//if the review is automated (not manual)
+		else {
+			//convert the current start date to a Date/Time object
+			var startDt = new GlideDateTime(respObj.review_period_start_date);
+
+			//add the number of months in the schedule
+			startDt.addMonthsUTC(parseInt(respObj.review_process_schedule));
+
+			//set the value of next review with the added month with the formatted date
+			respObj.next_review = formatDate(startDt.getDate());
+		}
+
+		/******* Calculate and supply Review Period *******/
+
+		//create an array variable to hold values that will be passed into the message
+		var params = [];
+
+		//call the script include, pass in the review_process_schedule property, Should get "Annual", "Bi-Annual", etc returned back
+		//push the return value to the array
+		params.push(new x_sisy_manage_pe_0.PRUtils().getPeriodName(respObj.review_process_schedule, true));
+
+		//set the response object element to the value of the message returned with the added params
+		respObj.review_schedule = gs.getMessage('edit_notification_review_sched', params);
+	}
+	
+
+
+	//return the response object and the http status
+	response.setBody(respObj);
+	response.setStatus(httpStatus);
+
+
+	/** formatDate Function will take in a date string and return a standard format
+    	MM-dd-yyyy
+     *
+     * @param {String} propValue The string date value
+     *
+     * @returns {String} formatted date
+     */
+	function formatDate(propValue) {
+
+		//start a Glide Date object
+		var dt = new GlideDate();
+
+		//set the value to the property value being passed in
+		dt.setValue(propValue);
+
+		//To get current users date format
+		var cUser = new GlideRecord('sys_user');
+		cUser.get(gs.getUserID());
+		if (cUser.date_format != undefined || cUser.date_format != "")
+			return dt.getByFormat(cUser.getValue('date_format'));
+		else
+			return dt.getByFormat("MM-dd-yyyy");
+
+		//return the formated date
+		//return dt.getByFormat("MM-dd-yyyy");
+
+
+	}
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_sisy_manage_pe_0/prop_mgmt</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:41</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>7a055fcf4c54b5503f30b270897e6812</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Pull Properties</sys_name>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy>protected</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name>sys_ws_operation_7a055fcf4c54b5503f30b270897e6812</sys_update_name>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:41</sys_updated_on>
+        <web_service_definition display_value="Performance Review Property Management">ba055fcf2654b550e496d7f6d77aea12</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

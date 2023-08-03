@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category/>
+        <format/>
+        <height/>
+        <image>f6055fcf4854b55092cb8b70730c6b9e</image>
+        <name>x_sisy_manage_pe_0.04_Performance-Past_Eval_Empty.svg</name>
+        <size_bytes>2159</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:28</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>3a055fcf5754b5503786f8121ea8de9e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_sisy_manage_pe_0.04_Performance-Past_Eval_Empty.svg</sys_name>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name>db_image_3a055fcf5754b5503786f8121ea8de9e</sys_update_name>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:28</sys_updated_on>
+        <thumbnail/>
+        <width/>
+    </db_image>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color/>
+        <chunk_size_bytes>700000</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/svg+xml</content_type>
+        <file_name>image</file_name>
+        <hash>e406c1a52ace7c2b12215919196dda0062e3bb41e830bdf32e35421ec826610f</hash>
+        <image_height/>
+        <image_width/>
+        <size_bytes>2159</size_bytes>
+        <size_compressed>738</size_compressed>
+        <state>available</state>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:28</sys_created_on>
+        <sys_id>f6055fcf4854b55092cb8b70730c6b9e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:28</sys_updated_on>
+        <table_name>ZZ_YYdb_image</table_name>
+        <table_sys_id>3a055fcf5754b5503786f8121ea8de9e</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="image" sys_id="f6055fcf4854b55092cb8b70730c6b9e">f6055fcf4854b55092cb8b70730c6b9e</sys_attachment>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:28</sys_created_on>
+        <sys_id>f2055fcf5254b5507f25c4f88133419e</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>rVbLctpAEPyVLeViHzzamZ19UeBDviC/gEECVWRECcXYf59ZQMhWDKESlw6o9zFqdfesmO5eVur1ud7sZtm667aTPN/v97A30LSrnLTWuazIjksmr3W1+fnZQowx5ofZTO2rZbeeZcwRfLQuU+uiWq07GfEMwWGmXqpi/715nWVaadWvU/3043RZlLvH6aKutj/m3VpVy1k2l+FF1S7qQi1kI5GsjT5kavEmiAlsENDKPToIHDO1697qYpaVVV1PNs2myPLHad7XlNvTQ/655rcCl4ulS2VX/UQq/7CV+pNfbX33bX4vrLdN/bZqNmrbVJtOVDZOA3ur2MjjmFSPrQHCcPghM0JsHJhox5C0AcusyHhA59Sl0ic84k/RFKwT/7ZYdCopAJ68zZS8PlIEZxwNduoAokkc7KSAgEYU6tr5Zlc27fMsO9zW8664Y+9BWyHhDBjrzL1qmy5NRH0/FtKm6z0RDB4iRT5RAWejPTORlw0m0kAkyoBlWdDKVmHpmC+QIheAjfXqAdnKQqIrtHwZnsLiA62IIFofWWlwgd3ACpM1YWDlteRH85EVi08XpSJLEGSvsBLDgme8wmpwLV99Hi5LLM478GhUj3mIk6cREpdB5FCjvX9NizSI9+4YF5/SYsOgBh3SYm5OC0mCNVmFkhbtr9lyIS0+4IEJf2FYpHuCtNcDilIGdbzJlg9hCfaYli8Mi8gePCVWsikS3cbq6hHVU5ZjxfokVso3I3iTwt5zDhYQnb/VUosIzPpwlKGz1zJdUrreiyfSu8jhyCTlMfr/YJKqYZTAs+wz9hqTsrzYWvJ5YHJKNE2fCdVjY1P7SNtoElPpjClE8ZQP7eWCV+QDOI3nefQWHMc/8Lj+CY+dda4snhLXMc++DkYLcu4OdcWHgCjjqQPMGZOcZBxJSSfIQS28SXzzfJ4/8xjhcf0THnerKfVJU/kf8fgbUPCHbW8IAAA=</data>
+        <length>972</length>
+        <position>1</position>
+        <sys_attachment display_value="image" sys_id="f6055fcf4854b55092cb8b70730c6b9e">f6055fcf4854b55092cb8b70730c6b9e</sys_attachment>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:28</sys_created_on>
+        <sys_id>72055fcfc354b550823092f4ed03129e</sys_id>
+    </sys_attachment_doc>
+</record_update>

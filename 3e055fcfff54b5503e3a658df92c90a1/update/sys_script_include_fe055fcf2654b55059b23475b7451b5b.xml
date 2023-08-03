@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_sisy_manage_pe_0.PRUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>setReviewPeriod:&#13;
+passed in months for review period (12 - Annual, 6 - Bi-Annual, other  # Months,  0 - Manual)&#13;
+returns Review Period name:  Annual_Sep_2020&#13;
+&#13;
+getPeriodName:&#13;
+passed in review period in months&#13;
+returns period verbiage (Annual, Bi-Annual, # Months, Manual)&#13;
+</description>
+        <name>PRUtils</name>
+        <script><![CDATA[var PRUtils = Class.create();
+PRUtils.prototype = {
+    initialize: function() {
+
+    },
+    /**
+     * setReviewPeriod Function ...
+     * 
+     * @param {String} revPeriod value being compared (ie: 12 - Annual, 6 - Bi-Annual, other  # Months,  0 - Manual)
+	 * @param {String} promptDate date to use to build name
+	 
+     * 
+     * @returns String period name (ie: Annual_Oct_2020)
+     */
+
+    setReviewPeriod: function(revPeriod, date) {
+
+        try {
+            //create new Glide Date Object
+            var gd = new GlideDate();
+			
+			//set the value to the date passed in
+			gd.setValue(date);
+
+            //pull the first 3 characters of the month name (Jan, Feb, Mar, etc)
+            var month = gd.getByFormat("MMM");
+
+            //pull the 4 Digit year (YYYY)
+            var yr = gd.getYearLocalTime();
+
+            //call function in this script include to pull the Period Name
+            var period = this.getPeriodName(revPeriod);
+
+            //return a custom string for Review Period Name
+            return period + '_' + month + '_' + yr;
+
+        } catch (err) {
+            gs.error("SI:{0}.{1} Has encountered the following error: {2}", this.type + '', 'setReviewPeriod', err);
+        }
+
+    },
+
+    /**
+     * getPeriodName Function ...
+     * 
+     * @param {String} revValue value of field to compared
+	 * @param {Boolean} uib indicator if passed from UIB builder
+     * 
+     * @returns String ((12 - Annual, 6 - Bi-Annual, other  # Months,  0 - Manual)  if UIB - returns Custom instead of '# Months')
+     */
+    getPeriodName: function(revValue, uib) {
+	
+        // return the Name of the current review period
+        try {
+            switch (revValue.toString()) {
+                case '12':
+                    revType = gs.getMessage('Annual');
+                    break;
+                case '6':
+                    revType = gs.getMessage('Bi-Annual');
+                    break;
+                case 'Manual':
+                    revType = gs.getMessage('Manual');
+                    break;
+                default:
+                    if (!uib) {
+                        revType = gs.getMessage('{0} Months',revValue);
+                    } else {
+                        revType = gs.getMessage('Custom');
+                    }
+
+            }
+            return revType;
+
+
+        } catch (err) {
+            gs.error("SI:{0}.{1} Has encountered the following error: {2}", this.type + '', 'getPeriodName', err);
+        }
+    },
+
+    getPRProperties: function(propName) {
+        var respObj = {};
+        if (!gs.nil(propName)) {
+            obj[propName] = gs.getProperty(propName);
+        } else {
+            var properties = new GlideRecord('sys_properties');
+            properties.addQuery('sys_scope.scope', 'x_sisy_manage_pe_0');
+            properties.query();
+
+            while (properties.next()) {
+                propName = properties.getValue('name');
+                obj[propName] = properties.getValue('value');
+            }
+        }
+		return respObj;
+    },
+
+    /****
+	toDo:
+	•No properties in body
+	•Properties not found (GR)
+	
+	*/
+    setPRProperteries: function(name_value_pairs) {
+
+        var propArray = [];
+
+        for (var propName in name_value_pairs) {
+            propArray.push(propName);
+        }
+
+        var respObj = {};
+        respObj.updatedProperties = [];     
+
+        for (var i = 0; i < propArray.length; i++) {
+            var proName = propArray[i];
+
+            if (respObj[proName] != name_value_pairs[proName]) {
+                gs.setProperty(proName, name_value_pairs[proName]);
+                respObj[proName] = name_value_pairs[proName];
+                respObj.updatedProperties.push(proName);
+            }
+        }
+		
+		respObj.properties = this.getPRProperties();
+		
+		return respObj;
+    },
+
+    type: 'PRUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:53</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>fe055fcf2654b55059b23475b7451b5b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PRUtils</sys_name>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name>sys_script_include_fe055fcf2654b55059b23475b7451b5b</sys_update_name>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:53</sys_updated_on>
+    </sys_script_include>
+</record_update>

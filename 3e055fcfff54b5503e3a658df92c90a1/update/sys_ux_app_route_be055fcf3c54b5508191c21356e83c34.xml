@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route">
+    <sys_ux_app_route action="INSERT_OR_UPDATE">
+        <app_config display_value="PR Employee Portal">f2055fcfa754b550f7955ecd23146ca1</app_config>
+        <description/>
+        <extension_point/>
+        <fields/>
+        <icon/>
+        <name>Evaluation</name>
+        <optional_parameters/>
+        <order>100</order>
+        <parent_macroponent display_value="Self Evaluation">76055fcf0f54b550c511ca79885f5835</parent_macroponent>
+        <parent_macroponent_composition_element_id>ckiajhhiiaafaaaaddvddffhhwlyhhyfggsp</parent_macroponent_composition_element_id>
+        <route_type>evaluation</route_type>
+        <screen_type display_value="Evaluation">72055fcfe554b55044b052dc8412f235</screen_type>
+        <sys_class_name>sys_ux_app_route</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:33</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>be055fcf3c54b5508191c21356e83c34</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Evaluation</sys_name>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name>sys_ux_app_route_be055fcf3c54b5508191c21356e83c34</sys_update_name>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:33</sys_updated_on>
+    </sys_ux_app_route>
+</record_update>

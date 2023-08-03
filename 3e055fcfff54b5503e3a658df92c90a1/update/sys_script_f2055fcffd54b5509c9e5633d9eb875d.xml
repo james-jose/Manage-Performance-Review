@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_sisy_manage_pe_0_performance_review</collection>
+        <condition>current.sys_id == gs.getProperty('x_sisy_manage_pe_0.settings_record');</condition>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Manage Settings Record</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+
+    //build an encoded query for the user filter and set it to a variable
+    var filter = 'sys_idIN' + current.getValue('emp_filter');
+
+    //run the script include to pull the review period name and set the result to a variable
+    var rev_period_name = new x_sisy_manage_pe_0.PRUtils().setReviewPeriod(current.getValue('review_process_schedule'), current.getValue('employee_prompt_self_review'));
+
+    //create a JSON object to hold all the values on the settings record
+    var name_value_pairs = {
+        "review_period_start_date": current.getValue('review_period_start_date'),
+        "end_date": current.getValue('end_date'),
+        "employee_prompt_self_review": current.getValue('employee_prompt_self_review'),
+        "notify_reminder": current.getValue('notify_reminder'),
+        "review_confirmation_deadline": current.getValue('evaluation_due'),
+        "mgr_empty_notify": current.getValue('notify_if_manager_isn_t_specified'),
+        "title_empty_notify": current.getValue('title_empty_notify'),
+        "review_user_filter_criteria": filter,
+        "review_process_schedule": current.getValue('review_process_schedule'),
+        "review_period_name": rev_period_name
+    };
+
+    //set a varaible to hold the existing properties as an object
+    var props = {};
+
+
+    /********* Pull the Current Property Values ***********/
+
+    try {
+        //query the property table for all properties in the scope
+        var properties = new GlideRecord('sys_properties');
+        properties.addQuery('sys_scope.scope', 'x_sisy_manage_pe_0');
+        properties.orderBy('name');
+        properties.query();
+
+        //loop through all properties found
+        while (properties.next()) {
+
+            //set the property name to a variable
+            var propName = properties.getValue('suffix');
+
+            //add the property to the object
+            props[propName] = properties.getValue('value');
+            //             }
+        }
+    }
+
+    //if an error occurs
+    catch (err) {
+
+        //generate a log
+        gs.error(gs.getMessage('property_api_err', ["Property Query", err]));
+    }
+
+    /*********** Process the incoming values ***********/
+
+    //set an array to hold the names of all properties being pushed
+    var propArray = [];
+
+    //loop through the request body
+    for (var propertyName in name_value_pairs) {
+
+        //make sure a matching property exists
+        if (props[propertyName] || props[propertyName] == '' ||props[propertyName] == null) {
+
+            //if the current property value is different from the incoming value
+            if (props[propertyName] != name_value_pairs[propertyName]) {
+
+                var fullName = 'x_sisy_manage_pe_0.' + propertyName;
+                var value = name_value_pairs[propertyName];
+
+                //update the property with the new value
+                gs.setProperty(fullName, value);
+            }
+        }
+    }
+
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:46:00</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f2055fcffd54b5509c9e5633d9eb875d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Manage Settings Record</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name>sys_script_f2055fcffd54b5509c9e5633d9eb875d</sys_update_name>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:46:00</sys_updated_on>
+        <template/>
+        <when>async</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=f2055fcffd54b5509c9e5633d9eb875d"/>
+</record_update>

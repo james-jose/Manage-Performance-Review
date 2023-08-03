@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FDac3125ed9e202050d729cfd0340ed49b</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>3e055fcfff54b5503e3a658df92c90a1</scope_name>
+        <serialized_content>{"FlowDesigner:FDac3125ed9e202050d729cfd0340ed49b":{"$COCollectionField":["Boolean"],"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FDac3125ed9e202050d729cfd0340ed49b.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Reached Prompt Date\",\"mandatory\":\"false\",\"child_name\":\"variable_child0\",\"uiUniqueId\":\"fb5f8d5a-3079-4c08-8449-f5d7e486cb21\",\"uiTypeLabel\":\"Array.Boolean\",\"co_type_name\":\"FDac3125ed9e202050d729cfd0340ed49b\",\"child_label\":\"Reached Prompt Date_child0\",\"child_type_label\":\"True/False\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.boolean\",\"child_type\":\"boolean\",\"order\":\"1\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"ec707c3f-32f5-44fa-9b38-563129ce0aba\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:46:07</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>f6055fcfc354b550940e80766f165291</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FDac3125ed9e202050d729cfd0340ed49b</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name>sys_complex_object_f6055fcfc354b550940e80766f165291</sys_update_name>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:46:07</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
+</record_update>

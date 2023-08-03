@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <includes/>
+        <macroponent display_value="Evaluation Settings">32055fcfc454b550c63430cd32913737</macroponent>
+        <name>Review translations</name>
+        <preset/>
+        <required_translations>[ {
+  "code" : null,
+  "message" : "Allows you to customize the number of times a review is sent out per year to employees and managers",
+  "comment" : ""
+}, {
+  "code" : null,
+  "message" : "Allows for managers to request evaluations from their employees via a prompt in the Performance appraisal workspace",
+  "comment" : ""
+}, {
+  "code" : null,
+  "message" : "Manual:",
+  "comment" : ""
+}, {
+  "code" : null,
+  "message" : "Custom:",
+  "comment" : ""
+}, {
+  "code" : null,
+  "message" : "Review schedule types",
+  "comment" : ""
+}, {
+  "code" : null,
+  "message" : "Sends out evaluations&amp;nbsp; twice a year to employees and managers",
+  "comment" : ""
+}, {
+  "code" : null,
+  "message" : "Annual (Default):",
+  "comment" : ""
+}, {
+  "code" : null,
+  "message" : "Sends out evaluations annually to employees and managers",
+  "comment" : ""
+}, {
+  "code" : null,
+  "message" : "Bi-annual:",
+  "comment" : ""
+} ]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ */
+async function handler({
+    api,
+    event,
+    helpers,
+    imports
+}) {
+    const heading = await helpers.translate('Review schedule types');
+    const subHeading1 = await helpers.translate('Annual (Default):');
+    const description1 = await helpers.translate('Sends out evaluations annually to employees and managers');
+    const subHeading2 = await helpers.translate('Bi-annual:');
+    const description2 = await helpers.translate('Sends out evaluations&nbsp; twice a year to employees and managers');
+    const subHeading3 = await helpers.translate('Custom:');
+    const description3 = await helpers.translate('Allows you to customize the number of times a review is sent out per year to employees and managers');
+    const subHeading4 = await helpers.translate('Manual:');
+    const description4 = await helpers.translate('Allows for managers to request evaluations from their employees via a prompt in the Performance appraisal workspace');
+    api.setState('reviewText', `<h1>${heading}</h1>
+<p><span style="font-size: 14pt;"><strong>${subHeading1}</strong></span></p>
+<p>${description1}</p><p><span style="font-size: 14pt;"><strong>${subHeading2}</strong></span></p>
+<p>${description2}</p><p><span style="font-size: 14pt;"><strong>${subHeading3}</strong></span></p>
+<p>${description3}</p><p><span style="font-size: 14pt;"><strong>${subHeading4}</strong></span></p>
+<p>${description4}</p>`);
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>7e055fcfe554b550ff3d7e89fc586b2c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Review translations</sys_name>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name>sys_ux_client_script_7e055fcfe554b550ff3d7e89fc586b2c</sys_update_name>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:12</sys_updated_on>
+        <target/>
+        <type/>
+    </sys_ux_client_script>
+</record_update>

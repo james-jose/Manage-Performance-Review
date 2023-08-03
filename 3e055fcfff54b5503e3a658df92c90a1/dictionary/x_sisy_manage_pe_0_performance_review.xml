@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="72055fcf1b54b550fa8c1f4d2b4bcba3" label="Performance Review" max_length="40" name="x_sisy_manage_pe_0_performance_review" text_index="true" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="If applicable, has the employee achieved their goals from previous review?" max_length="4000" name="achieved_previous_goals" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Any additional thoughts or feedback?" max_length="4000" name="additional_thoughts" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Are there any areas you would like more feedback on?" max_length="4000" name="areas_more_feedback" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Client relations" max_length="40" name="client_relations" type="string">
+            <choice>
+                <element inactive_on_update="false" label="1 - Below expectations" sequence="0" value="1 - Below expectations"/>
+                <element inactive_on_update="false" label="2 - Meets expectations" sequence="1" value="2 - Meets expectations"/>
+                <element inactive_on_update="false" label="3 - Exceeds expectations" sequence="2" value="3 - Exceeds expectations"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Comments" max_length="1000" name="comments" type="journal_input"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Creativity" max_length="40" name="creativity" type="string">
+            <choice>
+                <element inactive_on_update="false" label="1 - Below expectations" sequence="0" value="1 - Below expectations"/>
+                <element inactive_on_update="false" label="2 - Meets expectations" sequence="1" value="2 - Meets expectations"/>
+                <element inactive_on_update="false" label="3 - Exceeds expectations" sequence="2" value="3 - Exceeds expectations"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Dependability" max_length="40" name="dependability" type="string">
+            <choice>
+                <element inactive_on_update="false" label="1 - Below expectations" sequence="0" value="1 - Below expectations"/>
+                <element inactive_on_update="false" label="2 - Meets expectations" sequence="1" value="2 - Meets expectations"/>
+                <element inactive_on_update="false" label="3 - Exceeds expectations" sequence="2" value="3 - Exceeds expectations"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Looking Back, what are some things you would of done differently?" max_length="4000" name="done_differently" type="string"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Employee" max_length="32" name="employee" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Employee Confirmation" max_length="40" name="employee_confirmation" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Employee confirmation date" max_length="40" name="employee_confirmation_date" read_only="true" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="Request employee self evaluation" max_length="40" name="employee_prompt_self_review" type="glide_date"/>
+        <element attributes="no_sort=true,slushbucket_ref_no_expand=true" label="Employee Filter" max_length="1024" name="emp_filter" reference="sys_user" type="glide_list"/>
+        <element attributes="edge_encryption_enabled=true" label="Review period end date" max_length="40" name="end_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="Evaluation due" max_length="40" name="evaluation_due" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="Created" max_length="40" name="evaluation_sent_out" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="When do you excel at your job?" max_length="40" name="excel_at_job" type="string">
+            <choice>
+                <element inactive_on_update="false" label="When I am working alone on a project" sequence="0" value="alone"/>
+                <element inactive_on_update="false" label="When I am working with a team" sequence="1" value="team"/>
+                <element inactive_on_update="false" label="When I balance working with a team and working alone" sequence="2" value="balance"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="What are your goals for next year?" max_length="4000" name="future_goals" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="What should they work towards for next review?" max_length="4000" name="goals_next_review" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Group work" max_length="40" name="group_work" type="string">
+            <choice>
+                <element inactive_on_update="false" label="1 - Below expectations" sequence="0" value="1 - Below expectations"/>
+                <element inactive_on_update="false" label="2 - Meets expectations" sequence="1" value="2 - Meets expectations"/>
+                <element inactive_on_update="false" label="3 - Exceeds expectations" sequence="2" value="3 - Exceeds expectations"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Honesty" max_length="40" name="honesty" type="string">
+            <choice>
+                <element inactive_on_update="false" label="1 - Below expectations" sequence="0" value="1 - Below expectations"/>
+                <element inactive_on_update="false" label="2 - Meets expectations" sequence="1" value="2 - Meets expectations"/>
+                <element inactive_on_update="false" label="3 - Exceeds expectations" sequence="2" value="3 - Exceeds expectations"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Independent work" max_length="40" name="independent_work" type="string">
+            <choice>
+                <element inactive_on_update="false" label="1 - Below expectations" sequence="0" value="1 - Below expectations"/>
+                <element inactive_on_update="false" label="2 - Meets expectations" sequence="1" value="2 - Meets expectations"/>
+                <element inactive_on_update="false" label="3 - Exceeds expectations" sequence="2" value="3 - Exceeds expectations"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Manager" max_length="32" name="manager" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Manager Confirmation" max_length="40" name="manager_confirmation" read_only="true" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Manager confirmation date" max_length="40" name="manager_confirmation_date" read_only="true" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="How has your manager helped you? What can they do differently?" max_length="4000" name="manager_done" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Manager Feedback" max_length="4000" name="manager_feedback" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Manager Review" max_length="4000" name="manager_review" type="journal"/>
+        <element label="Note" max_length="600" name="note" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="true" label="Notify if manager isn't specified" max_length="40" name="notify_if_manager_isn_t_specified" type="string">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Manager and employee receive reminder" max_length="40" name="notify_reminder" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Productivity" max_length="40" name="productivity" type="string">
+            <choice>
+                <element inactive_on_update="false" label="1 - Below expectations" sequence="0" value="1 - Below expectations"/>
+                <element inactive_on_update="false" label="2 - Meets expectations" sequence="1" value="2 - Meets expectations"/>
+                <element inactive_on_update="false" label="3 - Exceeds expectations" sequence="2" value="3 - Exceeds expectations"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="What Projects have you enjoyed working on the most and why?" max_length="4000" name="projects_current" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="12" label="Frequency" max_length="40" name="review_frequency" type="string">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" default="Manual" label="Review Period" max_length="40" name="review_period" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Review period start date" max_length="40" name="review_period_start_date" type="glide_date"/>
+        <element label="Months between reviews" max_length="40" name="review_process_schedule" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="Self Review" max_length="4000" name="self_review" type="journal"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="draft" label="Status" max_length="40" name="state" read_only="true" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Draft" sequence="0" value="draft"/>
+                <element inactive_on_update="false" label="Submitted" sequence="1" value="submitted"/>
+                <element inactive_on_update="false" label="Update Requested" sequence="2" value="update_requested"/>
+                <element inactive_on_update="false" label="Manager Review" sequence="3" value="manager_review"/>
+                <element inactive_on_update="false" label="Confirmado" language="es" sequence="4" value="confirmed"/>
+                <element inactive_on_update="false" label="Confirmed" sequence="4" value="confirmed"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Takes initiative" max_length="40" name="takes_initiative" type="string">
+            <choice>
+                <element inactive_on_update="false" label="1 - Below expectations" sequence="0" value="1 - Below expectations"/>
+                <element inactive_on_update="false" label="2 - Meets expectations" sequence="1" value="2 - Meets expectations"/>
+                <element inactive_on_update="false" label="3 - Exceeds expectations" sequence="2" value="3 - Exceeds expectations"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" default="0" label="Times Submitted" max_length="40" name="times_submitted" read_only="true" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="Title" max_length="40" name="title" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="true" label="Notify if title isn't specified" max_length="40" name="title_empty_notify" type="string">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="What upcoming projects are you excited about?" max_length="4000" name="upcoming_projects" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" label="Works to full potential" max_length="40" name="works_to_full_potential" type="string">
+            <choice>
+                <element inactive_on_update="false" label="1 - Below expectations" sequence="0" value="1 - Below expectations"/>
+                <element inactive_on_update="false" label="2 - Meets expectations" sequence="1" value="2 - Meets expectations"/>
+                <element inactive_on_update="false" label="3 - Exceeds expectations" sequence="2" value="3 - Exceeds expectations"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Work consistency" max_length="40" name="work_consistency" type="string">
+            <choice>
+                <element inactive_on_update="false" label="1 - Below expectations" sequence="0" value="1 - Below expectations"/>
+                <element inactive_on_update="false" label="2 - Meets expectations" sequence="1" value="2 - Meets expectations"/>
+                <element inactive_on_update="false" label="3 - Exceeds expectations" sequence="2" value="3 - Exceeds expectations"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Work Notes" max_length="4000" name="work_notes" type="journal_input"/>
+        <element attributes="edge_encryption_enabled=true" label="What work are you most proud of?" max_length="4000" name="work_proud" type="string"/>
+        <index name="index">
+            <element name="employee"/>
+        </index>
+        <index name="index2">
+            <element name="manager"/>
+        </index>
+    </element>
+</database>

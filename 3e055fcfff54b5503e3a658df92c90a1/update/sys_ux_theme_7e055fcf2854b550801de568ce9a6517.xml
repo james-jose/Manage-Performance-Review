@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_theme">
+    <sys_ux_theme action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <description>event</description>
+        <name>PR Theme</name>
+        <parent/>
+        <sys_class_name>sys_ux_theme</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:21</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>7e055fcf2854b550801de568ce9a6517</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PR Theme</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name>sys_ux_theme_7e055fcf2854b550801de568ce9a6517</sys_update_name>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:21</sys_updated_on>
+        <theme>{  &#13;
+  "--now-line-height-crop--before": "-0.2125em",&#13;
+  "--now-line-height-crop--after": "-0.15em",&#13;
+  "--now-font-family": "Roboto",&#13;
+  "--now-color--primary-0": "221,220,246",&#13;
+  "--now-color--primary-1": "221,220,246",&#13;
+  "--now-color--primary-2": "83,81,210",&#13;
+  "--now-color--primary-3": "1,60,71",&#13;
+  "--now-color--secondary-0": "244,253,255",&#13;
+  "--now-color--secondary-1": "83,81,210",&#13;
+  "--now-color--secondary-2": "1,89,109",&#13;
+  "--now-color--secondary-3": "1,60,71",   &#13;
+  "--now-color--neutral-15": "126,139,141",&#13;
+  "--now-color--link-1": "38,111,235", &#13;
+  "--now-text-link--primary--color": "38,111,235",&#13;
+  "--now-text-link--primary--color--hover": "227,240,255",&#13;
+  "--now-button--border-radius": "8px",&#13;
+  "--now-button--border-width": "1px",&#13;
+  "--now-button--font-weight": "Medium",&#13;
+  "--now-button--height-scale": "1.25",&#13;
+  "--now-button--primary--border-width": "0",&#13;
+  "--now-button--primary--color": "255,255,255",&#13;
+  "--now-button--primary--color--hover": "255,255,255",&#13;
+  "--now-button--primary--color--active": "255,255,255",&#13;
+  "--now-button--primary--background-color": "38,111,235",&#13;
+  "--now-button--primary--background-color--hover": "21, 97, 229",&#13;
+  "--now-button--primary--background-color--active": "38,111,235",&#13;
+  "--now-button--primary--border-color": "38,111,235",&#13;
+  "--now-button--primary--border-color--hover": "1,89,107",&#13;
+  "--now-button--primary--border-color--active": "227,240,255",&#13;
+  "--now-button--primary_high-contrast--background-color--active": "1,89,107",&#13;
+  "--now-button--primary_high-contrast--background-color--hover": "1,89,107",&#13;
+  "--now-button--primary_high-contrast--color": "38,111,235",&#13;
+  "--now-button--primary_high-contrast--color--hover": "227,240,255",&#13;
+  "--now-button--primary-highlighted--background-color--active": "1,89,107",&#13;
+  "--now-button--primary-highlighted--background-color--hover": "1,89,107",&#13;
+  "--now-button--primary-highlighted--color": "38,111,235",&#13;
+  "--now-button--primary-highlighted--color--active": "227,240,255",&#13;
+  "--now-button--primary-highlighted--color--hover": "1,89,107",&#13;
+  "--now-button--primary-highlighted--color--selected": "38,111,235",&#13;
+  "--now-button--primary-highlighted_high-contrast--color": "38,111,235",&#13;
+  "--now-button--primary-highlighted_high-contrast--color--hover": "227,240,255",&#13;
+  "--now-button--primary-highlighted_high-contrast--color--selected": "227,240,255",&#13;
+  "--now-button--primary-highlighted--background-color--selected": "1,89,107",&#13;
+  "--now-button--secondary--color": "0,0,0",&#13;
+  "--now-button--secondary--border-radius": "'12px'",&#13;
+  "--now-button--secondary--color--hover": "255,255,255",&#13;
+  "--now-button--secondary--color--active": "227,24,255",&#13;
+  "--now-button--secondary--background-color": "227, 240, 255",&#13;
+  "--now-button--secondary--background-color--hover": "38,111,235",&#13;
+  "--now-button--secondary--background-color--active": "255,255,255",&#13;
+  "--now-button--secondary--border-color": "255, 255, 255",&#13;
+  "--now-button--secondary--border-color--hover": "21,97,229",&#13;
+  "--now-button--secondary--border-color--active": "227,240,255",&#13;
+  "--now-button--secondary-highlighted--background-color--active": "1,89,107",&#13;
+  "--now-button--secondary-highlighted--background-color--hover": "1,89,107",&#13;
+  "--now-button--secondary-highlighted--color--active": "227,240,255",&#13;
+  "--now-button--secondary-highlighted--color--hover": "1,89,107",&#13;
+  "--now-button--secondary-highlighted--background-color--selected": "1,89,107",&#13;
+  "--now-button--secondary-highlighted--color--selected": "1,89,107", &#13;
+  "--now-button--bare_secondary--color": "255, 255, 255",&#13;
+  "--now-button--bare_secondary--color--hover": "1,89,107",&#13;
+  "--now-button--bare_secondary--color--active": "227,240,255",&#13;
+  "--now-button--bare_secondary--background-color--hover": "255,255,255",&#13;
+  "--now-button--bare_secondary--background-color--active": "255,255,255",&#13;
+  "--now-button--tertiary--color": "51,62,63",&#13;
+  "--now-button--tertiary--color--hover": "0,0,0",&#13;
+  "--now-button--tertiary--color--active": "0,0,0",&#13;
+  "--now-button--tertiary--background-color": "0,0,0,0",&#13;
+  "--now-button--tertiary--background-color--active": "0,0,0,0",&#13;
+  "--now-button--tertiary--background-color--hover": "0,0,0,0",&#13;
+  "--now-button--tertiary--border-color": "0,0,0,0",&#13;
+  "--now-button--tertiary--border-color--hover": "0,0,0,0",&#13;
+  "--now-button--tertiary--border-color--active": "0,0,0,0",&#13;
+  "--now-button--tertiary--background-color--selected_active": "0,0,0,0",&#13;
+  "--now-button--tertiary--background-color--selected_hover": "0,0,0,0",&#13;
+  "--now-button--tertiary--color--selected": "0,0,0,0",&#13;
+  "--now-button--tertiary--color--selected_active": "0,0,0,0",&#13;
+  "--now-button--tertiary--color--selected_hover": "0,0,0,0",&#13;
+  "--now-button--bare_tertiary--background-color--hover": "0,0,0,0",&#13;
+  "--now-button--bare_tertiary--background-color--active": "0,0,0,0",&#13;
+  "--now-checkbox--border-radius": "4px",&#13;
+  "--now-checkbox_icon--color": "1,119,142",&#13;
+  "--now-radio-buttons--background-color--active": "255,255,255",&#13;
+  "--now-radio-buttons_radio--background-color": "1,119,142",&#13;
+  "--now-heading--title--font-family":"'Cabin'",&#13;
+  "--now-heading--header-primary--font-family":"'Cabin'",&#13;
+  "--now-heading--header-secondary--font-family":"'Cabin'",&#13;
+  "--now-heading--header-tertiary--font-family":"'Cabin'",&#13;
+  "--now-heading--title-primary--font-family":"'Cabin'",&#13;
+  "--now-heading--title-secondary--font-family":"'Cabin'",&#13;
+  "--now-heading--title-tertiary--font-family":"'Cabin'",&#13;
+  "--now-card-header_heading--tertiary--font-style":"'Cabin'",&#13;
+  "--now-heading--header-primary--font-weight": "600",&#13;
+  "--now-heading--header-secondary--font-weight": "600",&#13;
+  "--now-heading--header-tertiary--font-weight": "700",&#13;
+    &#13;
+  "content-tree--font-family":"'Roboto'",&#13;
+  "content-tree--font-style": "normal",&#13;
+  "content-tree--font-weight": "normal",&#13;
+  "content-tree--text-transform": "none",&#13;
+  "content-tree--color": "0,0,0",&#13;
+  "content-tree--color--selected": "99,114,116",&#13;
+  "content-tree--background-color": "0,0,0",&#13;
+  "content-tree--background-color-alpha": "0",&#13;
+  "content-tree--background-color--hover": "227,240,255",&#13;
+  "content-tree--background-color--selected": "38,111,235",&#13;
+  "content-tree--background-color--selected-child1": "99,114,116",&#13;
+  "content-tree--background-color--selected-child": "240, 76, 92",&#13;
+  "content-tree_placeholder--font-style": "italic",&#13;
+  "content-tree_placeholder--font-weight": "600",&#13;
+  "content-tree_placeholder--color": "22,27,28",&#13;
+  "content-tree_placeholder--color--hover": "38,111,235",&#13;
+  "content-tree_placeholder--color--active": "227,240,255",&#13;
+  "content-tree_divider--color": "209,214,214",&#13;
+  "content-tree_trigger--color": "0,0,0",&#13;
+  "content-tree_trigger--color--hover": "38,111,235",&#13;
+  "content-tree_trigger--color--active": "0,0,0",&#13;
+  "content-tree_trigger--background-color--hover": "1,89,107",&#13;
+  "content-tree_trigger--background-color-alpha--hover": "0.1",&#13;
+  "content-tree_trigger--background-color--active": "1,89,107",&#13;
+  "content-tree_trigger--background-color-alpha--active": "0.25",&#13;
+  "content-tree_icon-identifier--color": "99,114,116",    &#13;
+  "content-tree_icon-identifier--actionable--color": "1,119,142",&#13;
+  "content-tree_icon--color--error": "200,60,54",&#13;
+  "content-tree_label--color--error": "99,114,116",&#13;
+  "content-tree_label--color--loading": "30,133,109",&#13;
+  "content-tree_dragdrop--color": "14,120,196",&#13;
+  "content-tree_dragdrop--background-color": "255,255,255",&#13;
+  "content-tree_drop-target-parent--border-color": "14,120,196",&#13;
+  "--now-content-tree-node is-selected": "227,240,255",&#13;
+    &#13;
+  "--now-tabs--color": "22,27,28",&#13;
+  "--now-tabs--color--hover": "69,67,174",&#13;
+  "--now-tabs--color--selected": "83,81,210",&#13;
+  "--now-tabs--background-color-alpha": "0",  &#13;
+  "--now-tabs--border-color": "0,0,0,0",&#13;
+  "--now-tabs--background-color": "0,0,0,0",&#13;
+  "--now-tabs--background-color--hover": "0,0,0,0",&#13;
+  "--now-tabs--background-color--selected": "0,0,0,0",&#13;
+  "--now-tabs--font-style": "normal",&#13;
+  "--now-tabs--font-weight": "600",&#13;
+  "--now-tabs--font-family": "'Cabin'",&#13;
+  "--now-tabs--text-transform": "none",&#13;
+&#13;
+  "--now-modal--border-radius": "20px",&#13;
+  "--now-modal--border-width": "0",&#13;
+    &#13;
+  "--now-toggle_track--border-radius": "100px",&#13;
+  "--now-toggle_handle--border-radius": "100px",&#13;
+  "--now-toggle_track--border-color": "99,114,116",&#13;
+  "--now-toggle_track--background-color": "172,180,181",&#13;
+  "--now-toggle_track--background-color--checked": "1,119,142",&#13;
+    &#13;
+  "canvas-toolbar-button--color" : "0,0,0",&#13;
+  "canvas-toolbar--background-color": "225, 220, 214",&#13;
+  "canvas-toolbar-button--background-color--focus":"38, 111, 235",&#13;
+  "heading--header-primary--font-family": "'Cabin', sans-serif'",&#13;
+  "chrome-tabs--background-color": "225, 220, 214",&#13;
+  "chrome-tabs-content--background-color": "225, 220, 214"&#13;
+}&#13;
+/*&#13;
+{&#13;
+&#13;
+&#13;
+    "--now-toggle_handle--border-radius": "100px",&#13;
+ &#13;
+&#13;
+&#13;
+    "--now-score-value--font-weight": "bold",&#13;
+    "--now-score-value--font-family": "Cabin",&#13;
+    "--now-score-value--font-size":"48px",&#13;
+&#13;
+}&#13;
+*/</theme>
+    </sys_ux_theme>
+</record_update>

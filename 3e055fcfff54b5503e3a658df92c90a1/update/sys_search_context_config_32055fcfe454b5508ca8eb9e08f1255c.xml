@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_search_context_config">
+    <sys_search_context_config action="INSERT_OR_UPDATE">
+        <application_id display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</application_id>
+        <evam_definition/>
+        <genius_results_limit>1</genius_results_limit>
+        <hit_highlighting>false</hit_highlighting>
+        <name>Performance Review AI Search</name>
+        <search_engine>ai_search</search_engine>
+        <search_profile display_value="Performance Review Default Search Profile">7e055fcf7754b55033e0c5e3694b22a0</search_profile>
+        <search_results_limit>10</search_results_limit>
+        <spell_check>true</spell_check>
+        <suggestions_to_show_limit>10</suggestions_to_show_limit>
+        <sys_class_name>sys_search_context_config</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:17</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>32055fcfe454b5508ca8eb9e08f1255c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Performance Review AI Search</sys_name>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name>sys_search_context_config_32055fcfe454b5508ca8eb9e08f1255c</sys_update_name>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:17</sys_updated_on>
+        <ts_index_group/>
+        <view/>
+    </sys_search_context_config>
+</record_update>

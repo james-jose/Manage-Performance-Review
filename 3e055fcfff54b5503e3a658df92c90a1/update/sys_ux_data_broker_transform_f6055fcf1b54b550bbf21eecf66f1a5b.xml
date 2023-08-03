@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_data_broker_transform">
+    <sys_ux_data_broker_transform action="INSERT_OR_UPDATE">
+        <acl_failure_result/>
+        <api_name>x_sisy_manage_pe_0.Employee Evaluation Stepper Result</api_name>
+        <description/>
+        <mutates_server_data>false</mutates_server_data>
+        <name>Employee Evaluation Stepper Result</name>
+        <output_schema/>
+        <private>false</private>
+        <props>[&#13;
+   {&#13;
+      "name":"evaluationRecord",&#13;
+      "label":"Employee Evaluation Stepper Input",&#13;
+      "description":"Result of Lookup Record Query on Employee Evaluation Record",&#13;
+      "readOnly":false,&#13;
+      "fieldType":"object",&#13;
+      "mandatory":true,&#13;
+      "defaultValue":{&#13;
+      }&#13;
+   }&#13;
+]</props>
+        <required_translations>[{"message":"Employee Evaluation Stepper Input","comment":""},{"message":"Result of Lookup Record Query on Employee Evaluation Record","comment":""}]</required_translations>
+        <schema_version>1.0.0</schema_version>
+        <script><![CDATA[function transform(input) {
+    var reviewPeriod = gs.getProperty('x_sisy_manage_pe_0.review_period_name'),
+		currentPhase = "", 
+		currentState = "";
+	
+	var pr = new GlideRecord('x_sisy_manage_pe_0_performance_review');
+	pr.addEncodedQuery('review_period=' + reviewPeriod + '^employee=' + input.evaluationRecord + '^active=true');
+	pr.setLimit(1);
+	pr.query();
+	if(pr.next()){
+		currentState = pr.state.toString();
+		currentPhase = getPhase(currentState);
+	}
+
+    function getPhase(status) {
+        var phase = "";
+		
+		if(status == "draft"){
+			phase = "self-evaluation";
+		}
+
+        if (status == "submitted" || status == "update_requested") {
+            phase = "evaluation-feedback";
+        }
+
+        if (status == "manager_review") {
+            phase = "acceptance";
+        }
+
+        if (status == "confirmed") {
+            phase = "complete";
+        }
+
+        return phase;
+    }
+
+    function getProgress(step) {
+        var progress = 'none';
+		
+		
+        if (!gs.nil(currentPhase) && currentPhase != 'self-evaluation' && step == 'step1') {
+            progress = 'done';
+        }
+
+        if ((currentPhase == 'acceptance' || currentPhase == 'complete') && step == 'step2') {
+            progress = 'done';
+        }
+
+        if (currentPhase == 'complete' && step == 'step3') {
+            progress = 'done';
+        }
+
+        return progress;
+    }
+
+
+    function getLabel(step) {
+        var label = gs.getMessage("Not Ready");
+
+        if (!gs.nil(currentPhase) && step == 'step1') {
+            if (currentPhase == "self-evaluation") {
+                label = gs.getMessage('In Progress');
+            } else {
+                label = gs.getMessage('Completed');
+            }
+        }
+
+        if (!gs.nil(currentPhase) && step == 'step2') {
+            if (currentPhase == "evaluation-feedback") {
+                label = gs.getMessage('In Progress');
+            } else if (currentPhase == "self-evaluation") {
+                label = gs.getMessage("Not Ready");
+            } else {
+                label = gs.getMessage('Completed');
+            }
+        }
+
+        if (!gs.nil(currentPhase) && step == 'step3') {
+            if (currentPhase == "acceptance") {
+                label = gs.getMessage('In Progress');
+            } else if (currentPhase != "complete") {
+                label = gs.getMessage("Not Ready");
+            } else {
+                label = gs.getMessage('Completed');
+            }
+        }
+
+        return label;
+
+    }
+
+    function getCurrentStep(status) {
+        var step = '';
+
+        if (status == 'draft') {
+            step = 'step1';
+        }
+
+        if (status == 'submitted' || status == 'update_requested') {
+            step = 'step2';
+        }
+
+        if (status == 'manager_review') {
+            step = 'step3';
+        }
+
+        return step;
+    }
+
+
+    return [{
+        "stepperResult": [{
+                "id": "step1",
+                "label": getLabel("step1"),
+                "sublabel": gs.getMessage("Fill out self evaluation"),
+                "progress": getProgress("step1")
+            },
+            {
+                "id": "step2",
+                "label": getLabel("step2"),
+                "sublabel": gs.getMessage("Read evaluation feedback"),
+                "progress": getProgress("step2")
+            },
+            {
+                "id": "step3",
+                "label": getLabel("step3"),
+                "sublabel": gs.getMessage("Accept self evaluation"),
+                "progress": getProgress("step3")
+            }
+        ],
+        "currentStep": [{
+            "id": "current_step",
+            "label": getCurrentStep(currentState)
+        }],
+		"currentState": [{
+			"label": currentState
+		}],
+		"currentPhase": [{
+			"label": currentPhase
+		}]
+    }];
+}]]></script>
+        <sys_class_name>sys_ux_data_broker_transform</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:46:00</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>f6055fcf1b54b550bbf21eecf66f1a5b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Employee Evaluation Stepper Result</sys_name>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name>sys_ux_data_broker_transform_f6055fcf1b54b550bbf21eecf66f1a5b</sys_update_name>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:46:00</sys_updated_on>
+    </sys_ux_data_broker_transform>
+</record_update>

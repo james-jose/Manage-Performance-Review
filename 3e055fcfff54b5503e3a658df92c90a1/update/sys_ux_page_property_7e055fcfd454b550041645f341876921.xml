@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_page_property">
+    <sys_ux_page_property action="INSERT_OR_UPDATE">
+        <choices/>
+        <description/>
+        <name>chrome_footer</name>
+        <page display_value="Manage-Performance-Review Workspace">72055fcfcc54b5502fc81280966151a1</page>
+        <required_translations>[{"message":"ServiceNow on Facebook","comment":""},{"message":"linkedin-outline","comment":""},{"message":"ServiceNow on Youtube","comment":""},{"message":"ServiceNow on Linkedin","comment":""},{"message":"Cookie policy","comment":""},{"message":"Cookie preference","comment":""},{"message":"ServiceNow Inc. on Pinterest","comment":""},{"message":"Business continuity","comment":""},{"message":"Privacy policy","comment":""},{"message":"ServiceNow Inc. on Twitter","comment":""},{"message":"ServiceNow on Instagram","comment":""},{"message":"Terms and conditions","comment":""},{"message":"GDPR","comment":""},{"message":"ServiceNow on Tumblr","comment":""}]</required_translations>
+        <route/>
+        <suffix/>
+        <sys_class_name>sys_ux_page_property</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:46:21</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>global</sys_domain_path>
+        <sys_id>7e055fcfd454b550041645f341876921</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>chrome_footer</sys_name>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name>sys_ux_page_property_7e055fcfd454b550041645f341876921</sys_update_name>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:46:21</sys_updated_on>
+        <type>json</type>
+        <unique_name>x_sisy_manage_pe_0.72055fcfcc54b5502fc81280966151a1.route.chrome_footer.f1a19611dba8ec10f16b5ce4dc96194f</unique_name>
+        <value>{&#13;
+  "public_page": {&#13;
+    "enable_footer_topbar": true,&#13;
+    "footer_topbar_options": {&#13;
+      "enable_logo": true,&#13;
+      "enable_address": true,&#13;
+      "address": {&#13;
+        "email": "info@servicenow.com",&#13;
+        "first_line": {&#13;
+          "street": "2225 Lawson Lane"&#13;
+        },&#13;
+        "second_line": {&#13;
+          "city": "Santa Clara",&#13;
+          "state": "CA",&#13;
+          "zip": "95054"&#13;
+        }&#13;
+      },&#13;
+      "enable_linkset_group": true,&#13;
+      "max_linkset_count": 5&#13;
+    },&#13;
+    "enable_footer_bar": true,&#13;
+    "footer_bar_options": {&#13;
+      "enable_links": true,&#13;
+      "max_links_count": 20,&#13;
+      "links": [&#13;
+        {&#13;
+          "id": 1,&#13;
+          "type": "external",&#13;
+          "target": "_blank",&#13;
+          "label": {&#13;
+            "translatable": true,&#13;
+            "message": "Terms and conditions"&#13;
+          },&#13;
+          "itemValue": {&#13;
+            "url": "https://www.servicenow.com/terms-of-use.html"&#13;
+          }&#13;
+        },&#13;
+        {&#13;
+          "id": 2,&#13;
+          "type": "external",&#13;
+          "target": "_blank",&#13;
+          "label": {&#13;
+            "translatable": true,&#13;
+            "message": "Privacy policy"&#13;
+          },&#13;
+          "value": {&#13;
+            "url": "https://www.servicenow.com/service-privacy.html"&#13;
+          }&#13;
+        },&#13;
+        {&#13;
+          "id": 3,&#13;
+          "type": "external",&#13;
+          "target": "_blank",&#13;
+          "label": {&#13;
+            "translatable": true,&#13;
+            "message": "GDPR"&#13;
+          },&#13;
+          "itemValue": {&#13;
+            "url": "https://www.servicenow.com/terms-of-use.html"&#13;
+          }&#13;
+        },&#13;
+        {&#13;
+          "id": 4,&#13;
+          "type": "external",&#13;
+          "target": "_blank",&#13;
+          "label": {&#13;
+            "translatable": true,&#13;
+            "message": "Cookie policy"&#13;
+          },&#13;
+          "value": {&#13;
+            "url": "https://www.servicenow.com/service-privacy.html"&#13;
+          }&#13;
+        },&#13;
+        {&#13;
+          "id": 5,&#13;
+          "type": "external",&#13;
+          "target": "_blank",&#13;
+          "label": {&#13;
+            "translatable": true,&#13;
+            "message": "Cookie preference"&#13;
+          },&#13;
+          "itemValue": {&#13;
+            "url": "https://www.servicenow.com/terms-of-use.html"&#13;
+          }&#13;
+        },&#13;
+        {&#13;
+          "id": 6,&#13;
+          "type": "external",&#13;
+          "target": "_blank",&#13;
+          "label": {&#13;
+            "translatable": true,&#13;
+            "message": "Business continuity"&#13;
+          },&#13;
+          "value": {&#13;
+            "url": "https://www.servicenow.com/service-privacy.html"&#13;
+          }&#13;
+        }&#13;
+      ],&#13;
+      "enable_social_links": true,&#13;
+      "max_social_links_count": 7,&#13;
+      "social_links": [&#13;
+        {&#13;
+          "id": 1,&#13;
+          "icon": "twitter-outline",&#13;
+          "label": {&#13;
+            "translatable": true,&#13;
+            "message": "ServiceNow Inc. on Twitter"&#13;
+          },&#13;
+          "url": "https://twitter.com/servicenow"&#13;
+        },&#13;
+        {&#13;
+          "id": 2,&#13;
+          "icon": "facebook-outline",&#13;
+          "label": {&#13;
+            "translatable": true,&#13;
+            "message": "ServiceNow on Facebook"&#13;
+          },&#13;
+          "url": "https://www.facebook.com/servicenow"&#13;
+        },&#13;
+        {&#13;
+          "id": 3,&#13;
+          "icon": "youtube-outline",&#13;
+          "label": {&#13;
+            "translatable": true,&#13;
+            "message": "ServiceNow on Youtube"&#13;
+          },&#13;
+          "url": "https://www.youtube.com/user/servicenowinc"&#13;
+        },&#13;
+        {&#13;
+          "id": 4,&#13;
+          "icon": "instagram-outline",&#13;
+          "label": {&#13;
+            "translatable": true,&#13;
+            "message": "ServiceNow on Instagram"&#13;
+          },&#13;
+          "url": "https://www.instagram.com/servicenow/"&#13;
+        },&#13;
+        {&#13;
+          "id": 5,&#13;
+          "icon": "pinterest-outline",&#13;
+          "label": {&#13;
+            "translatable": true,&#13;
+            "message": "ServiceNow Inc. on Pinterest"&#13;
+          },&#13;
+          "url": "https://www.pinterest.com/IIC_UXUI/01-servicenow-service-portal/"&#13;
+        },&#13;
+        {&#13;
+          "id": 6,&#13;
+          "icon": "tumblr-outline",&#13;
+          "label": {&#13;
+            "translatable": true,&#13;
+            "message": "ServiceNow on Tumblr"&#13;
+          },&#13;
+          "url": "https://servicenow.tumblr.com/"&#13;
+        },&#13;
+        {&#13;
+          "id": 7,&#13;
+          "icon": {&#13;
+            "translatable": true,&#13;
+            "message": "linkedin-outline"&#13;
+          },&#13;
+          "label": "ServiceNow on Linkedin",&#13;
+          "url": "https://www.linkedin.com/company/servicenow"&#13;
+        }&#13;
+      ],&#13;
+      "enable_copyright_text": true,&#13;
+      "copyright_text": "© 2020 ServiceNow. All rights reserved."&#13;
+    }&#13;
+  }&#13;
+}</value>
+    </sys_ux_page_property>
+    <sys_translated_text action="delete_multiple" query="documentkey=7e055fcfd454b550041645f341876921"/>
+</record_update>

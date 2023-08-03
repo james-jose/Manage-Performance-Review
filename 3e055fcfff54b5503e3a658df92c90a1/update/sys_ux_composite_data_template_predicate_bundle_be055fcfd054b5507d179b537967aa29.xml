@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_composite_data_template_predicate_bundle">
+    <sys_ux_composite_data_template_predicate_bundle action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <name>Perf Review Sys Bundle 2</name>
+        <sys_class_name>sys_ux_composite_data_template_predicate_bundle</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:06</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>be055fcfd054b5507d179b537967aa29</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Perf Review Sys Bundle 2</sys_name>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name>sys_ux_composite_data_template_predicate_bundle_be055fcfd054b5507d179b537967aa29</sys_update_name>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:06</sys_updated_on>
+    </sys_ux_composite_data_template_predicate_bundle>
+</record_update>

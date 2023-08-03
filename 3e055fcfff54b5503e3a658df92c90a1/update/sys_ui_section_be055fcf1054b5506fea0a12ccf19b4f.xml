@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Self Review" section_id="be055fcf1054b5506fea0a12ccf19b4f" sys_domain="global" table="x_sisy_manage_pe_0_performance_review" version="3" view="">
+        <sys_ui_annotation action="INSERT_OR_UPDATE">
+            <is_plain_text>false</is_plain_text>
+            <sys_created_by>james.jose</sys_created_by>
+            <sys_created_on>2023-08-01 17:45:09</sys_created_on>
+            <sys_id>be055fcfb654b55074b82242701dbd47</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>james.jose</sys_updated_by>
+            <sys_updated_on>2023-08-01 17:45:09</sys_updated_on>
+            <text>Looking back</text>
+            <type display_value="Section Separator">443e806c0fd30000b12e6903cfe01281</type>
+        </sys_ui_annotation>
+        <sys_ui_annotation action="INSERT_OR_UPDATE">
+            <is_plain_text>false</is_plain_text>
+            <sys_created_by>james.jose</sys_created_by>
+            <sys_created_on>2023-08-01 17:45:09</sys_created_on>
+            <sys_id>ba055fcf5d54b550bbe18b15c9c34147</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>james.jose</sys_updated_by>
+            <sys_updated_on>2023-08-01 17:45:09</sys_updated_on>
+            <text>Your role</text>
+            <type display_value="Section Separator">443e806c0fd30000b12e6903cfe01281</type>
+        </sys_ui_annotation>
+        <sys_ui_annotation action="INSERT_OR_UPDATE">
+            <is_plain_text>false</is_plain_text>
+            <sys_created_by>james.jose</sys_created_by>
+            <sys_created_on>2023-08-01 17:45:09</sys_created_on>
+            <sys_id>b6055fcf6254b550a123a8d153a56347</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>james.jose</sys_updated_by>
+            <sys_updated_on>2023-08-01 17:45:09</sys_updated_on>
+            <text>Looking forward</text>
+            <type display_value="Section Separator">443e806c0fd30000b12e6903cfe01281</type>
+        </sys_ui_annotation>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>be055fcfb654b55074b82242701dbd47</element>
+            <position>0</position>
+            <sys_created_by>james.jose</sys_created_by>
+            <sys_created_on>2023-08-01 17:45:09</sys_created_on>
+            <sys_id>32055fcfa754b550d4fd9e40539ca348</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Self Review" display_value="Self Review" name="x_sisy_manage_pe_0_performance_review" sys_domain="global" view="Default view">be055fcf1054b5506fea0a12ccf19b4f</sys_ui_section>
+            <sys_updated_by>james.jose</sys_updated_by>
+            <sys_updated_on>2023-08-01 17:45:09</sys_updated_on>
+            <sys_user/>
+            <type>annotation</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>projects_current</element>
+            <position>1</position>
+            <sys_created_by>james.jose</sys_created_by>
+            <sys_created_on>2023-08-01 17:45:09</sys_created_on>
+            <sys_id>3e055fcfb554b5505c4538c062b3a847</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Self Review" display_value="Self Review" name="x_sisy_manage_pe_0_performance_review" sys_domain="global" view="Default view">be055fcf1054b5506fea0a12ccf19b4f</sys_ui_section>
+            <sys_updated_by>james.jose</sys_updated_by>
+            <sys_updated_on>2023-08-01 17:45:09</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>work_proud</element>
+            <position>2</position>
+            <sys_created_by>james.jose</sys_created_by>
+            <sys_created_on>2023-08-01 17:45:09</sys_created_on>
+            <sys_id>b2055fcf3e54b55042bce6adbbbd7148</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Self Review" display_value="Self Review" name="x_sisy_manage_pe_0_performance_review" sys_domain="global" view="Default view">be055fcf1054b5506fea0a12ccf19b4f</sys_ui_section>
+            <sys_updated_by>james.jose</sys_updated_by>
+            <sys_updated_on>2023-08-01 17:45:09</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>done_differently</element>
+            <position>3</position>
+            <sys_created_by>james.jose</sys_created_by>
+            <sys_created_on>2023-08-01 17:45:09</sys_created_on>
+            <sys_id>72055fcf6354b55054b32b7d816c3948</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Self Review" display_value="Self Review" name="x_sisy_manage_pe_0_performance_review" sys_domain="global" view="Default view">be055fcf1054b5506fea0a12ccf19b4f</sys_ui_section>
+            <sys_updated_by>james.jose</sys_updated_by>
+            <sys_updated_on>2023-08-01 17:45:09</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>ba055fcf5d54b550bbe18b15c9c34147</element>
+            <position>4</position>
+            <sys_created_by>james.jose</sys_created_by>
+            <sys_created_on>2023-08-01 17:45:09</sys_created_on>
+            <sys_id>7e055fcf0654b5506ebfe74c4a7d9f47</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Self Review" display_value="Self Review" name="x_sisy_manage_pe_0_performance_review" sys_domain="global" view="Default view">be055fcf1054b5506fea0a12ccf19b4f</sys_ui_section>
+            <sys_updated_by>james.jose</sys_updated_by>
+            <sys_updated_on>2023-08-01 17:45:09</sys_updated_on>
+            <sys_user/>
+            <type>annotation</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>excel_at_job</element>
+            <position>5</position>
+            <sys_created_by>james.jose</sys_created_by>
+            <sys_created_on>2023-08-01 17:45:09</sys_created_on>
+            <sys_id>f2055fcf9854b5506e04291e9068d248</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Self Review" display_value="Self Review" name="x_sisy_manage_pe_0_performance_review" sys_domain="global" view="Default view">be055fcf1054b5506fea0a12ccf19b4f</sys_ui_section>
+            <sys_updated_by>james.jose</sys_updated_by>
+            <sys_updated_on>2023-08-01 17:45:09</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>manager_done</element>
+            <position>6</position>
+            <sys_created_by>james.jose</sys_created_by>
+            <sys_created_on>2023-08-01 17:45:09</sys_created_on>
+            <sys_id>fa055fcf4c54b550e895000d66bf7147</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Self Review" display_value="Self Review" name="x_sisy_manage_pe_0_performance_review" sys_domain="global" view="Default view">be055fcf1054b5506fea0a12ccf19b4f</sys_ui_section>
+            <sys_updated_by>james.jose</sys_updated_by>
+            <sys_updated_on>2023-08-01 17:45:09</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>areas_more_feedback</element>
+            <position>7</position>
+            <sys_created_by>james.jose</sys_created_by>
+            <sys_created_on>2023-08-01 17:45:09</sys_created_on>
+            <sys_id>f6055fcf2154b550c61f2bb67c814d47</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Self Review" display_value="Self Review" name="x_sisy_manage_pe_0_performance_review" sys_domain="global" view="Default view">be055fcf1054b5506fea0a12ccf19b4f</sys_ui_section>
+            <sys_updated_by>james.jose</sys_updated_by>
+            <sys_updated_on>2023-08-01 17:45:09</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>b6055fcf6254b550a123a8d153a56347</element>
+            <position>8</position>
+            <sys_created_by>james.jose</sys_created_by>
+            <sys_created_on>2023-08-01 17:45:09</sys_created_on>
+            <sys_id>7a055fcf4e54b550f1393e8a1f871547</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Self Review" display_value="Self Review" name="x_sisy_manage_pe_0_performance_review" sys_domain="global" view="Default view">be055fcf1054b5506fea0a12ccf19b4f</sys_ui_section>
+            <sys_updated_by>james.jose</sys_updated_by>
+            <sys_updated_on>2023-08-01 17:45:09</sys_updated_on>
+            <sys_user/>
+            <type>annotation</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>upcoming_projects</element>
+            <position>9</position>
+            <sys_created_by>james.jose</sys_created_by>
+            <sys_created_on>2023-08-01 17:45:09</sys_created_on>
+            <sys_id>3a055fcf4854b550c595ca6fe7d08847</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Self Review" display_value="Self Review" name="x_sisy_manage_pe_0_performance_review" sys_domain="global" view="Default view">be055fcf1054b5506fea0a12ccf19b4f</sys_ui_section>
+            <sys_updated_by>james.jose</sys_updated_by>
+            <sys_updated_on>2023-08-01 17:45:09</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>future_goals</element>
+            <position>10</position>
+            <sys_created_by>james.jose</sys_created_by>
+            <sys_created_on>2023-08-01 17:45:09</sys_created_on>
+            <sys_id>72055fcfdf54b550abfd7d96d4800b47</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Self Review" display_value="Self Review" name="x_sisy_manage_pe_0_performance_review" sys_domain="global" view="Default view">be055fcf1054b5506fea0a12ccf19b4f</sys_ui_section>
+            <sys_updated_by>james.jose</sys_updated_by>
+            <sys_updated_on>2023-08-01 17:45:09</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Self Review</caption>
+            <header>false</header>
+            <name>x_sisy_manage_pe_0_performance_review</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>james.jose</sys_created_by>
+            <sys_created_on>2023-08-01 17:45:09</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>be055fcf1054b5506fea0a12ccf19b4f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_sisy_manage_pe_0_performance_review</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+            <sys_update_name>sys_ui_section_be055fcf1054b5506fea0a12ccf19b4f</sys_update_name>
+            <sys_updated_by>james.jose</sys_updated_by>
+            <sys_updated_on>2023-08-01 17:45:09</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

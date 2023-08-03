@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>x_sisy_manage_pe_0.pr_eval_button</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function runMailScript(current, template, email, email_action, event) {
+	
+    var sysID = current.sys_id;
+	var instance = gs.getProperty('glide.servlet.uri');
+	var link = instance + 'x/sisy/x_sisy_manage_pe_0-pr/workspace/record/x_sisy_manage_pe_0_performance_review/' + sysID;
+
+    var backgroundColor = 'background-color: #278efc;';
+    var color = 'color: #ffffff;';
+    var fontSize = 'font-size: 12px;';
+    var fontFamily = 'font-family: Helvetica, Arial, sans-serif;';
+    var textDecoration = 'text-decoration: none; border-radius: 3px;';
+    var webKitBorder = '-webkit-border-radius: 10px;';
+    var mozBorder = '-moz-border-radius: 10px;';
+    var display = 'display: inline-block;';
+    var padding = 'padding: 15px 100px;';
+
+	template.print('<table style="background-color: #278efc; height: 50px; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;" role="presentation" border="0" width="234" cellspacing="0" cellpadding="0">');
+	template.print('<tbody><tr>');
+	template.print('<td style="border-radius: 16px; width: 230px; text-align: center; height: 45px;"><span style="font-family: tahoma, arial, helvetica, sans-serif;"><a class="button-a button-a-primary" style="font-size: 11pt; line-height: 15px; text-decoration: none; border-radius: 16px;">');
+    template.print('<a href="' + link + '"');
+    template.print('style="' + backgroundColor + color + fontSize + fontFamily + textDecoration + webKitBorder + mozBorder + display);
+    template.print('">');
+    template.print(gs.getMessage('VIEW EVALUATION'));
+    template.print('</a>');
+	template.print('</td></tr></tbody></table>');
+    template.print('<br><br>');
+})(current, template, email, email_action, event);]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:00</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>fa055fcf0954b550cdd5be3dae2e365c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_sisy_manage_pe_0.pr_eval_button</sys_name>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name>sys_script_email_fa055fcf0954b550cdd5be3dae2e365c</sys_update_name>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:00</sys_updated_on>
+    </sys_script_email>
+</record_update>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_composite_data_filter">
+    <sys_ux_composite_data_filter action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <dataset display_value="Performance Review System Property">f2055fcffe54b550841c97f162bbcb2c</dataset>
+        <label>Performance review system property data filters</label>
+        <order>100</order>
+        <sys_class_name>sys_ux_composite_data_filter</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:36</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>be055fcff954b55093fef755d851f02b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Performance review system property data filters</sys_name>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name>sys_ux_composite_data_filter_be055fcff954b55093fef755d851f02b</sys_update_name>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:36</sys_updated_on>
+    </sys_ux_composite_data_filter>
+</record_update>

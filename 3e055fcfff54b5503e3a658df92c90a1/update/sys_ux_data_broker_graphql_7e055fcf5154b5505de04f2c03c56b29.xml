@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_data_broker_graphql">
+    <sys_ux_data_broker_graphql action="INSERT_OR_UPDATE">
+        <api_name>x_sisy_manage_pe_0.Lookup User Company and logo</api_name>
+        <description>Get the Users Company Name and Logo from a User recrod</description>
+        <mutates_server_data>false</mutates_server_data>
+        <name>Lookup User Company and logo</name>
+        <output_schema/>
+        <private>false</private>
+        <props>[ { "name": "userSysId", "label": "User", "fieldType": "reference", "typeMetadata": { "reference": "sys_user" }, "readOnly": false, "mandatory": false, "defaultValue": "", "description": "User" } ]</props>
+        <query/>
+        <required_translations>[{"message":"User","comment":""}]</required_translations>
+        <schema_version>1.0.0</schema_version>
+        <script><![CDATA[(function buildQuery(query, inputs) {
+    var userSysId = (inputs.userSysId || "").trim();
+	
+    if (gs.nil(userSysId))
+        userSysId = gs.getUserID();
+
+    var userQuery =
+        "{\r\n" +
+        "  GlideRecord_Query {\r\n" +
+        "    sys_user(sys_id: \"" + userSysId + "\") {\r\n" +
+		"       _results {\r\n" + 
+		"        company {\r\n" +
+		"            _reference {\r\n" +
+		"                name { value }\r\n" +
+        "                banner_image { value }\r\n" +
+        "            }\r\n" +
+		"         }\r\n" + 
+		"       }\r\n" + 
+        "    }\r\n" +
+        "  }\r\n" +
+        "}";
+
+    query.append(userQuery);
+})(query, inputs);]]></script>
+        <sys_class_name>sys_ux_data_broker_graphql</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:46:11</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>7e055fcf5154b5505de04f2c03c56b29</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Lookup User Company and logo</sys_name>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name>sys_ux_data_broker_graphql_7e055fcf5154b5505de04f2c03c56b29</sys_update_name>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:46:11</sys_updated_on>
+        <type>script</type>
+        <use_record_domain>false</use_record_domain>
+    </sys_ux_data_broker_graphql>
+</record_update>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_applet_launcher_tab">
+    <sys_sg_applet_launcher_tab action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applet_launcher/>
+        <icon display_value="Home Performance Appraisals">72055fcfaf54b550c83c3735e9740b53</icon>
+        <label>Performance Appraisals</label>
+        <roles/>
+        <sys_class_name>sys_sg_applet_launcher_tab</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:45:00</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>76055fcfc854b5509262bb745300b653</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Performance Appraisals</sys_name>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name>sys_sg_applet_launcher_tab_76055fcfc854b5509262bb745300b653</sys_update_name>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:45:00</sys_updated_on>
+    </sys_sg_applet_launcher_tab>
+</record_update>

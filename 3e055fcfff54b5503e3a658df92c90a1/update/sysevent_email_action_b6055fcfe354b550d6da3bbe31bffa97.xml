@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="INSERT_OR_UPDATE">
+        <action_insert>false</action_insert>
+        <action_update>true</action_update>
+        <active>false</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <category display_value="x_sisy_manage_pe_0.Performance R" name="x_sisy_manage_pe_0.Performance R">72055fcf2254b550a166790ce332da98</category>
+        <collection>x_sisy_manage_pe_0_performance_review</collection>
+        <condition table="x_sisy_manage_pe_0_performance_review">stateVALCHANGES^EQ<item endquery="false" field="state" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <content_type>text/html</content_type>
+        <default_interval/>
+        <description>Managers receive notifications when self-evaluations are submitted.</description>
+        <digest_from/>
+        <digest_html><![CDATA[<center>
+<table>
+<tbody>
+<tr>
+<td><img style="align: baseline;" title="" src="x_sisy_manage_pe_0.yellow-checkmark.pngx" alt="" width="40" height="40" align="baseline" border="" hspace="" vspace="" /></td>
+<td><br /></td>
+</tr>
+</tbody>
+</table>
+</center>
+<p style="text-align: center;"><strong><span style="font-family: arial, helvetica, sans-serif; font-size: 18pt;">It's time to review this self evaluation</span></strong></p>
+<p style="text-align: center;"><br /></p>
+<p style="text-align: center;"><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt; color: #808080;">${employee} submitted their self evaluation on ${sys_updated_on}</span></p>
+<table style="border-collapse: collapse; width: 100%; height: 52px;" border="1">
+<tbody>
+<tr style="height: 13px;">
+<td style="width: 50%; height: 13px;">Review Record</td>
+<td style="width: 50%; height: 13px;">${number}<br /><br /></td>
+</tr>
+<tr style="height: 13px;">
+<td style="width: 50%; height: 13px;">State</td>
+<td style="width: 50%; height: 13px;">${state}<br /><br /></td>
+</tr>
+<tr style="height: 13px;">
+<td style="width: 50%; height: 13px;">Created</td>
+<td style="width: 50%; height: 13px;">${sys_created_on}<br /><br /></td>
+</tr>
+<tr style="height: 13px;">
+<td style="width: 50%; height: 13px;">Review Start</td>
+<td style="width: 50%; height: 13px;">${review_period}<br /><br /></td>
+</tr>
+</tbody>
+</table>
+<p><br /></p>]]></digest_html>
+        <digest_reply_to/>
+        <digest_separator_html><![CDATA[<p><br /></p>
+<hr />
+<p>*****************************************************************************************************************</p>]]></digest_separator_html>
+        <digest_separator_text><![CDATA[\n--------------------------------------------------------------------------------\n]]></digest_separator_text>
+        <digest_subject>${employee} has submitted a self-evaluation (Digest). (${number})</digest_subject>
+        <digest_template/>
+        <digest_text/>
+        <digestable>true</digestable>
+        <enable_dynamic_translation>false</enable_dynamic_translation>
+        <event_name>activate.life.cycle.migration</event_name>
+        <event_parm_1>false</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from/>
+        <generation_type>engine</generation_type>
+        <importance/>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<center>
+<table>
+<tbody>
+<tr>
+<td><img style="align: baseline;" title="" src="yellow-checkmark.pngx" alt="" width="40" height="40" align="baseline" border="" hspace="" vspace="" /></td>
+<td><br /></td>
+</tr>
+</tbody>
+</table>
+</center>
+<p style="text-align: center;"><strong><span style="font-family: arial, helvetica, sans-serif; font-size: 18pt;">It's time to review this self evaluation</span></strong></p>
+<p style="text-align: center;"><br /></p>
+<p style="text-align: center;"><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt; color: #808080;">${employee} submitted their self evaluation on ${sys_updated_on}</span></p>
+<table style="border-collapse: collapse; width: 100%; height: 52px;" border="1">
+<tbody>
+<tr style="height: 13px;">
+<td style="width: 50%; height: 13px;">Review Record</td>
+<td style="width: 50%; height: 13px;">${number}<br /><br /></td>
+</tr>
+<tr style="height: 13px;">
+<td style="width: 50%; height: 13px;">State</td>
+<td style="width: 50%; height: 13px;">${state}<br /><br /></td>
+</tr>
+<tr style="height: 13px;">
+<td style="width: 50%; height: 13px;">Created</td>
+<td style="width: 50%; height: 13px;">${sys_created_on}<br /><br /></td>
+</tr>
+<tr style="height: 13px;">
+<td style="width: 50%; height: 13px;">Review Start</td>
+<td style="width: 50%; height: 13px;">${review_period}<br /><br /></td>
+</tr>
+</tbody>
+</table>
+<p><br /></p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>PR Manager Self Evaluation Submitted -DJ</name>
+        <omit_watermark>false</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields>employee.manager</recipient_fields>
+        <recipient_groups/>
+        <recipient_users>cf9384f6dbc8e01047124c9b0b9619f8,021484f6dbc8e01047124c9b0b9619ff</recipient_users>
+        <reply_to/>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>Ready for review: self evaluation from (DJ Digest Notification ) ${employee}</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:46:15</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b6055fcfe354b550d6da3bbe31bffa97</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PR Manager Self Evaluation Submitted -DJ</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name>sysevent_email_action_b6055fcfe354b550d6da3bbe31bffa97</sys_update_name>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:46:15</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template display_value="Performance Review Template">fa055fcfca54b550d064f9bcc2d73697</template>
+        <type>email</type>
+        <weight>0</weight>
+    </sysevent_email_action>
+</record_update>

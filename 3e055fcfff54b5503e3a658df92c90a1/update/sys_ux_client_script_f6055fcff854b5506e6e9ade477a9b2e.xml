@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <includes/>
+        <macroponent display_value="Self Evaluation">ba055fcf8f54b550ec63aaddbf23d830</macroponent>
+        <name>Screen Status Updated Handler</name>
+        <preset/>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ */
+function handler({
+    api,
+    event,
+    helpers,
+    imports
+}) {
+    var eventState = event.payload.status;
+    var recordState = api.data.gform_1.nowRecordFormBlob.formFieldValues.state.value;
+
+    console.log(event);
+
+    if (eventState == "updated" && recordState =="submitted") {
+        helpers.navigate.to('emp-evaluation', {
+            sysId: api.context.props.sysId,
+            status: 'submitted'
+        });
+    }
+
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>james.jose</sys_created_by>
+        <sys_created_on>2023-08-01 17:44:59</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>f6055fcff854b5506e6e9ade477a9b2e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Screen Status Updated Handler</sys_name>
+        <sys_package display_value="Manage-Performance-Review" source="x_sisy_manage_pe_0">3e055fcfff54b5503e3a658df92c90a1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
+        <sys_update_name>sys_ux_client_script_f6055fcff854b5506e6e9ade477a9b2e</sys_update_name>
+        <sys_updated_by>james.jose</sys_updated_by>
+        <sys_updated_on>2023-08-01 17:44:59</sys_updated_on>
+        <target/>
+        <type/>
+    </sys_ux_client_script>
+</record_update>
