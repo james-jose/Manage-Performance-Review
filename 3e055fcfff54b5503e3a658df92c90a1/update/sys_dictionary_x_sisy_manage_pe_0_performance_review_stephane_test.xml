@@ -11,7 +11,7 @@
         <column_label>Stephane_test</column_label>
         <comments/>
         <create_roles/>
-        <default_value/>
+        <default_value>true</default_value>
         <defaultsort/>
         <delete_roles/>
         <dependent/>
@@ -27,7 +27,7 @@
         <formula/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="">float</internal_type>
+        <internal_type display_value="">boolean</internal_type>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
         <name>x_sisy_manage_pe_0_performance_review</name>
@@ -55,7 +55,7 @@
         <sys_scope display_value="Manage-Performance-Review">3e055fcfff54b5503e3a658df92c90a1</sys_scope>
         <sys_update_name>sys_dictionary_x_sisy_manage_pe_0_performance_review_stephane_test</sys_update_name>
         <sys_updated_by>SJLLEROY</sys_updated_by>
-        <sys_updated_on>2023-08-08 18:18:41</sys_updated_on>
+        <sys_updated_on>2023-08-08 18:47:24</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
