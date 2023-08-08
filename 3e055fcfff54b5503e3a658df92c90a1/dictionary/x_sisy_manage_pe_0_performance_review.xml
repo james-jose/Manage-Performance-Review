@@ -102,7 +102,7 @@
                 <element inactive_on_update="false" label="Confirmed" sequence="4" value="confirmed"/>
             </choice>
         </element>
-        <element label="Stephane_test" max_length="40" name="stephane_test" type="string"/>
+        <element label="Stephane_test" max_length="40" name="stephane_test" type="float"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Takes initiative" max_length="40" name="takes_initiative" type="string">
             <choice>
                 <element inactive_on_update="false" label="1 - Below expectations" sequence="0" value="1 - Below expectations"/>
