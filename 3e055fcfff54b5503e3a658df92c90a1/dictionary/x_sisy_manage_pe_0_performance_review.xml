@@ -65,6 +65,7 @@
                 <element inactive_on_update="false" label="3 - Exceeds expectations" sequence="2" value="3 - Exceeds expectations"/>
             </choice>
         </element>
+        <element attributes="edge_encryption_enabled=true" label="james_test" max_length="40" name="james_test" type="boolean"/>
         <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Manager" max_length="32" name="manager" reference="sys_user" type="reference"/>
         <element attributes="edge_encryption_enabled=true" label="Manager Confirmation" max_length="40" name="manager_confirmation" read_only="true" type="boolean"/>
         <element attributes="edge_encryption_enabled=true" label="Manager confirmation date" max_length="40" name="manager_confirmation_date" read_only="true" type="glide_date"/>
@@ -102,6 +103,7 @@
                 <element inactive_on_update="false" label="Confirmed" sequence="4" value="confirmed"/>
             </choice>
         </element>
+        <element default="true" label="Stephane_test" max_length="40" name="stephane_test" type="boolean"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Takes initiative" max_length="40" name="takes_initiative" type="string">
             <choice>
                 <element inactive_on_update="false" label="1 - Below expectations" sequence="0" value="1 - Below expectations"/>
