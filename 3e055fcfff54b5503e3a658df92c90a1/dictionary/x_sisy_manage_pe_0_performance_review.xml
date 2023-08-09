@@ -103,6 +103,8 @@
                 <element inactive_on_update="false" label="Confirmed" sequence="4" value="confirmed"/>
             </choice>
         </element>
+
+        <element label="stephane_field" max_length="40" name="stephane_field" type="string"/>
         <element default="true" label="Stephane_test" max_length="40" name="stephane_test" type="boolean"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Takes initiative" max_length="40" name="takes_initiative" type="string">
             <choice>
