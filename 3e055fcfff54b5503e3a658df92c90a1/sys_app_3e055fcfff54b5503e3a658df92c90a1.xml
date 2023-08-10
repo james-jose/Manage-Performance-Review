@@ -29,15 +29,15 @@
         <sys_created_by>james.jose</sys_created_by>
         <sys_created_on>2023-08-01 17:44:48</sys_created_on>
         <sys_id>3e055fcfff54b5503e3a658df92c90a1</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_updated_by>james.jose</sys_updated_by>
-        <sys_updated_on>2023-08-08 21:41:46</sys_updated_on>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_updated_by>SJLLEROY</sys_updated_by>
+        <sys_updated_on>2023-08-10 18:26:47</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <uninstall_blocked>false</uninstall_blocked>
         <user_role/>
         <vendor/>
         <vendor_prefix/>
-        <version>1.12.19</version>
+        <version>1.13.0</version>
     </sys_app>
 </record_update>
